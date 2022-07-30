@@ -1,7 +1,7 @@
-import { Flex, FlexProps } from '@chakra-ui/react'
+import { Box, Flex, FlexProps } from '@chakra-ui/react'
 
 export const Container = (props: FlexProps) => (
-  <Flex
+  <Box
     direction="column"
     alignItems="center"
     justifyContent="flex-start"
