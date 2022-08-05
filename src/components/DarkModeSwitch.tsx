@@ -15,6 +15,7 @@ export const DarkModeSwitch = () => {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.2 }}
+        whileHover={{ scale: 1.2 }}
       >
         <IconButton
           style={{ display: 'inline-flex',

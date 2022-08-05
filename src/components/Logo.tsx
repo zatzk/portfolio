@@ -2,18 +2,17 @@ import { Box, useColorModeValue } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import Link from "next/link"
 import Image from 'next/image'
+import { motion } from "framer-motion"
 
 const LogoBox = styled.span`
   display: inline-flex;
   align-items: center;
   line-hight: 10px;
-  padding: 10px;
+  padding: 18px;
   
   img {
     transition: 200ms ease;
   }
-  
-  
   `
 
 const Logo = () => {
@@ -24,16 +23,19 @@ const Logo = () => {
   return (
     <Link  href="/" scroll={false}>
       <a>
-        <LogoBox>
-          <Image 
-            src={logoImg}
-            width={25} 
-            height={15}
-            
-            alt="logo" 
-            />
+        <motion.button whileHover={{ scale: 1.2 }}>
           
-        </LogoBox>
+          <LogoBox>
+            <Image 
+              src={logoImg}
+              width={25} 
+              height={15}
+              
+              alt="logo" 
+              />
+            
+          </LogoBox>
+        </motion.button>
       </a>
     </Link>
   )
