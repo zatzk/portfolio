@@ -16,7 +16,6 @@ export const Hero = ({ title }: { title: string }) => (
     
   >
     <Heading 
-      fontSize="6vw" 
       fontWeight="700" 
       fontStyle="normal" 
       fontSize="90"

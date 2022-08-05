@@ -5,7 +5,7 @@ import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import Head from 'next/head'
 
-const Index = () => (
+const about = () => (
   <Container height="100vh">
     <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,7 +23,7 @@ const Index = () => (
     
     <Container pt={14}>
       <Main  height="70vh" >
-        <Hero />
+        
       </Main>
 
       <Footer />
@@ -31,4 +31,4 @@ const Index = () => (
   </Container>
 )
 
-export default Index
+export default about
