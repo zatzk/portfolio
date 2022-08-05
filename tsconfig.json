@@ -17,13 +17,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "types": ["@emotion/react/types/css-prop"]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/navbar.js"  ],
+, "src/components/Navbar.tsx", "src/pages/index.tsx", "src/components/Main.tsxx", "src/components/Logo.tsx", "src/components/Hero.js", "src/components/Main.js"  ],
   "exclude": [
     "node_modules"
   ]
