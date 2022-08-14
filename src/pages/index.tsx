@@ -4,9 +4,10 @@ import { Footer } from '../components/Footer'
 import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import Head from 'next/head'
+import { Projects } from '../components/Projects'
 
 const Index = () => (
-  <Container height="100vh">
+  <Container height="100%">
     <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="zatzk's homepage" />
@@ -22,8 +23,9 @@ const Index = () => (
     <Navbar />
     
     <Container pt={14}>
-      <Main  height="70vh" >
-        <Hero />
+      <Main >
+        <Hero/>
+        <Projects />
       </Main>
 
       <Footer />
