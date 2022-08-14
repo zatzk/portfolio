@@ -24,40 +24,6 @@ const Links = [
 ];
 
 
-
-const nbt = css` 
-  a{
-    position: relative;
-    display: inline-flex;
-    padding: 15px 40px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    margin-right: 0px;
-
-  }
-`
-const nbthover = css` 
-  a:hover {
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
-  }
-
-  :nth-of-type(1){
-    filter: hue-rotate(220deg);
-  }
-  :nth-of-type(2){
-      filter: hue-rotate(30deg);
-  }
-  :nth-of-type(3){
-      filter: hue-rotate(270deg);
-  }
-  
-`
 const btn = css`
   a {
     text-decoration: none;
