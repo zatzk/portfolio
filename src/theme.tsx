@@ -15,11 +15,19 @@ const theme = extendTheme({
       },
       heroGradientStart: {
         default: '#7928CA',
-        _dark: '#e3a7f9',
+        _dark: '#D941B6',
       },
       heroGradientEnd: {
-        default: '#FF0080',
+        default: '#03e9f4',
         _dark: '#fbec8f',
+      },
+      bgCardColor1: {
+        default: 'gray.100',
+        _dark: '#292929',
+      },
+      bgCardColor2: {
+        default: 'gray.200',
+        _dark: '#292929',
       },
     },
     radii: {
