@@ -4,7 +4,6 @@ export const Main = (props: BoxProps) => (
   <Box 
     as="main"
     pb={8}
-    
     {...props}
   />
 )
