@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Text, Container, Flex, Heading, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import { motion, MotionConfig } from 'framer-motion';
 import React from "react";
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
@@ -12,8 +12,8 @@ export function Projects() {
     },
     hover: {
       opacity: 0.6,
-      scale: 1.04,
-      y: -30,
+      scale: 1.02,
+      y: -10,
       boxShadow: "0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4",
       borderRadius: "5px",
     },
@@ -30,14 +30,55 @@ export function Projects() {
         ease: 'easeOut',
         delay: 0.15,
       }}
+      
     >
       <Box
         position="relative"
         bg="#292929"
-        height="20em"
+        height="18em"
         borderRadius="5px"
         bgGradient="linear(to-b, bgCardColor1, bgCardColor2)"
-        >teste</Box>
+        >
+          <Flex
+            position="relative"
+            width="100%"
+            height="80px"
+            alignContent="center"
+            justifyContent="flex-end"
+          >
+            <Box pt="33px" pr="20px"><FiGithub size={22}/></Box>
+            <Box pt="33px" pr="25px"><FiExternalLink size={22} /></Box>
+          </Flex>
+          <Box
+            width="100%"
+            textAlign="left"
+            px="25px"
+            pt="10px"
+          >
+            <Heading fontSize="15px">
+              Integrating Algolia Search with Wordpress Multisite
+            </Heading>
+            <Text pt="19px" fontSize="sm">
+              Building a custom multisite compatible Wordpress plugin to build global search with Algolia
+            </Text>
+          </Box>
+          <Box
+            width="100%"
+            textAlign="left"
+
+          >
+            <Text
+             px="25px"
+             pt="30px"
+             fontSize="13px"
+             fontFamily="primary"
+            >
+             Node Express Firebase Vue
+             </Text>
+
+          </Box>
+
+        </Box>
     </motion.div>
 )
   
@@ -50,12 +91,13 @@ export function Projects() {
     alignContent="center"
     >
      <motion.div 
-      initial={{y: -100, opacity: 0}}
+      initial={{y: -200, opacity: 0}}
       animate={{
         y:0, opacity: 1
+        
        }}
       transition={{
-        ease: 'easeIn',
+        ease: 'easeOut',
         delay: 2,
       }}
      >
