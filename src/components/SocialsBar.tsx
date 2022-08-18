@@ -54,6 +54,17 @@ export function SocialsBar() {
       justifyContent="center"
     
     >
+      <motion.div 
+      initial={{y: -200, opacity: 0}}
+      animate={{
+        y:0, opacity: 1
+        
+       }}
+      transition={{
+        ease: 'easeOut',
+        delay: 2.2,
+      }}
+     >
       <List
         display="flex"
         flexDirection={{base: 'row',md: 'column', lg: 'column'}}
@@ -78,6 +89,7 @@ export function SocialsBar() {
         margin="0px auto"
         bg="#04E0D9"
         ></Box>
+      </motion.div>
     </Container>
   )
 }
