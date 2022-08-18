@@ -17,10 +17,7 @@ const Links = [
     name: "ABOUT",
     path: "/about",
   },
-  {
-    name: "ART",
-    path: "/arts",
-  },
+  
 ];
 
 

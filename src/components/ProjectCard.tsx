@@ -19,12 +19,7 @@ const boxCardVariants = {
 const textVariants = {
   hoverIconLink: {
     opacity: 1,
-    color: "#04E0D9",
     scale: 1.1
-  },
-  hoverTitle: {
-    opacity: 1,
-    color: "#04E0D9"
   },
 }
 
@@ -47,71 +42,71 @@ export const ProjectCard = ({
       delay: 0.15,
     }}
   >
-    <Box
-      as="flex"
-      px="25px"
+    <Flex
+      display="flex"
+      justifyContent="space-between"
+      flexDirection="column"
+      alignItems="flex-start"
+      padding="2rem 1.75rem"
       position="relative"
       bg="#292929"
-      height="19em"
+      height="20em"
       borderRadius="5px"
       bgGradient="linear(to-b, bgCardColor1, bgCardColor2)"
       >
-        <Flex
-          position="relative"
-          width="100%"
-          height="70px"
-          alignContent="center"
-          justifyContent="flex-end"
-        >
-          {proto && (
-            <Box as="a" href={proto}  pt="33px" pr="20px"><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiExternalLink size={22} /></motion.div></Box>
-          )}
-          <Box as="a" href={repo} pt="33px" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiGithub size={22} /></motion.div></Box>
-        </Flex>
-        <Box
-          position="relative"
-          width="100%"
-          textAlign="left"
-          pt="10px"
-        >
-          <motion.div whileTap="hoverTitle" whileHover="hoverTitle" variants={textVariants}>
-            <Heading position="relative" fontSize="22px">
+        <Box as="header" display="block">
+          <Flex
+            display="flex"
+            alignContent="center"
+            justifyContent="flex-end"
+            alignItems="center"
+            mb="35px"
+
+            >
+            {proto && (
+              <Box as="a" href={proto} pr="15px" _hover={{ color: '#04E0D9' }} transitionDuration="300ms" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiExternalLink size={22} /></motion.div></Box>
+              )}
+            <Box as="a" href={repo} _hover={{ color: '#04E0D9' }} transitionDuration="300ms" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiGithub size={22} /></motion.div></Box>
+          </Flex>
+
+          <motion.div>
+            <Heading _hover={{ color: '#04E0D9' }} transitionDuration="300ms" position="static" fontSize="22px" lineHeight="1.1" mb="10px" >
               {title}
             </Heading>
           </motion.div>
 
-          <Text position="relative" pt="19px" fontSize="sm">
+          <Text position="relative"  fontSize="sm">
             {description}
-          </Text>
+          </Text> 
         </Box>
 
         
         <Box
-          width="100%"
-          textAlign="left"
-          position="absolute"
+          as="footer"
+          display="block"
         >
-        <List display="flex" flexDirection="row" alignItems="flex-end" flexWrap="wrap" mt="20px">
-          {tools.map((tool) => (
-            <motion.a whileHover={{scale: 1.1}}>
+          <List display="flex" flexDirection="row" alignItems="flex-end" flexGrow="1" flexWrap="wrap" mt="20px">
+            {tools.map((tool) => (
+              <motion.a whileHover={{scale: 1.1}}>
 
-              <ListItem key={tool.id} p="0.5rem">
-                <Icon
-                  aria-label={tool.name}
-                  transitionDuration="300ms"
-                  boxSize="1.5rem"
-                  as={tool.icon}
-                  _hover={{ fill: tool.color }}
-                  />
-              </ListItem>
-            </motion.a>
-          ))}
-        </List>
+                <ListItem key={tool.id} p="0.5rem">
+                  <Icon
+                    aria-label={tool.name}
+                    transitionDuration="300ms"
+                    boxSize="1.5rem"
+                    as={tool.icon}
+                    _hover={{ fill: tool.color }}
+                    />
+                </ListItem>
+              </motion.a>
+            ))}
+          </List>
+
 
         </Box>
       
 
-      </Box>
+      </Flex>
   </motion.div>
   );
 };
