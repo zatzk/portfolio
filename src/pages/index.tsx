@@ -14,11 +14,11 @@ const Index = () => (
         <meta name="description" content="zatzk's homepage" />
         <meta name="author" content="Jean Luiz" />
         <meta name="author" content="zatzk" />
-        <link rel="shortcut icon" href="/src/public/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <meta property="og:site_name" content="zatzk's portfolio" />
         <meta name="og:title" content="zatzk's portfolio" />
         <meta property="og:type" content="website" />
-        <title>zatzk - Portfolio</title>
+        <title>zatzk's portfolio - Projects</title>
       </Head>
 
     <Navbar />
