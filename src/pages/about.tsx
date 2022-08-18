@@ -2,7 +2,6 @@ import { Container } from '../components/Container'
 import { Main } from '../components/Main'
 import { Footer } from '../components/Footer'
 import { Navbar } from '../components/Navbar'
-import { Hero } from '../components/Hero'
 import Head from 'next/head'
 
 const about = () => (
