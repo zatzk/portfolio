@@ -5,6 +5,7 @@ import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import Head from 'next/head'
 import { Projects } from '../components/Projects'
+import { SocialsBar } from '../components/SocialsBar'
 
 const Index = () => (
   <Container height="100%">
@@ -21,7 +22,7 @@ const Index = () => (
       </Head>
 
     <Navbar />
-    
+    <SocialsBar />
     <Container pt={14}>
       <Main >
         <Hero/>
