@@ -12,9 +12,31 @@ import {
   SiAdobe,
   SiSocketdotio,
   SiTypescript,
-  SiChakraui
+  SiChakraui,
+  SiFramer,
+  SiHeroku,
+  SiJson,
 } from 'react-icons/si';
 import { v4 as uuidv4 } from 'uuid';
+
+export const json = {
+  name: 'json',
+  icon: SiJson,
+  color: '#808080',
+  id: uuidv4()
+};
+export const heroku = {
+  name: 'Heroku',
+  icon: SiHeroku,
+  color: '#800080',
+  id: uuidv4()
+};
+export const framer = {
+  name: 'Framer Motion',
+  icon: SiFramer,
+  color: '#800080',
+  id: uuidv4()
+};
 
 export const html5 = {
   name: 'HTML5',
