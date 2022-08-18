@@ -8,6 +8,7 @@ export const Footer = () => (
     fontFamily="primary"
     textAlign="center"
     pb="20px"
+    mt="80px"
     >
        &copy; {new Date().getFullYear()} Jean Luiz. All Rights Reserved.
   </Box>
