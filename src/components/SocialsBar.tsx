@@ -55,14 +55,14 @@ export function SocialsBar() {
     
     >
       <motion.div 
-      initial={{y: -200, opacity: 0}}
+      initial={{y: 200, opacity: 0}}
       animate={{
         y:0, opacity: 1
         
        }}
       transition={{
         ease: 'easeOut',
-        delay: 2.2,
+        delay: 1.4,
       }}
      >
       <List
