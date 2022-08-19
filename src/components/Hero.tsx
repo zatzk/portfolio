@@ -1,7 +1,7 @@
-import { Box, Container, Flex, Heading } from '@chakra-ui/react'
+import { Box, Container, Flex } from '@chakra-ui/react'
 import React, { useEffect } from "react";
 import { useState } from "react";
-import WavyText from "./WavyText";
+import WavyText from "./textAnimation/WavyText";
 
 
 export function Hero() {
