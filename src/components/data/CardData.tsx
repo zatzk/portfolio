@@ -1,13 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 import {
   chakra,
-  electron,
-  figma,
   nextjs,
   nodejs,
   react,
-  socketIO,
-  storybook,
   typescript,
   framer,
   js,
