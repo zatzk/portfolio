@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { Container, SimpleGrid } from '@chakra-ui/react'
 import { motion } from 'framer-motion';
 import React from "react";
