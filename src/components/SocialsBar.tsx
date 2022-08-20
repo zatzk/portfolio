@@ -8,7 +8,9 @@ export const SocialsCard = ({
   icon,
   href,
   name,
+  // eslint-disable-next-line react/prop-types
   color,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   ...props
 }) => {
 
@@ -74,6 +76,7 @@ export function SocialsBar() {
         justifyContent="center"
       >
         {Socials.map((social) => (
+          // eslint-disable-next-line react/jsx-key
           <SocialsCard 
             icon={social.icon}
             href={social.href}
