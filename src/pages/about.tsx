@@ -31,7 +31,7 @@ const about = () => (
         <AboutText />
         <Link href = "mailto: zatzk.cnt@outlook.com">
           <Btn  >
-            GET IN TOUCH!
+            GET IN TOUCH
           </Btn>
         </Link>
       </Main>
