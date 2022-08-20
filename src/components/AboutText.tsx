@@ -31,7 +31,7 @@ export function AboutText() {
             <Box  pb="22px" display="inline-block">
               <Text>
                 Hey there! My name is Jean Luiz, also known in the web as zatzk. 
-                I'm a software engineering's student at Instituto Federal da Bahia (IFBA) 
+                I&#39;m a software engineering&#39;s student at Instituto Federal da Bahia (IFBA) 
                 and a self-taught designer and artist.
               </Text>
             </Box>
@@ -49,7 +49,7 @@ export function AboutText() {
           <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 0.9, duration: 0.8}}>
             <Box pb="22px" display="inline-block">
               <Text>
-                When I'm not coding or studying about it, I usually focus on creative activities 
+                When I&#39;m not coding or studying about it, I usually focus on creative activities 
                 related to UI and UX design, or digital art as a hobby.
                 I also have some other hobbies besides digital art, like studying languages, 
                 playing RTS and RPG games and listen to music.
