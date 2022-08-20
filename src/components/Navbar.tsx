@@ -1,11 +1,11 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Container, HStack, IconButton, Stack, useColorModeValue, useDisclosure, Button } from "@chakra-ui/react";
+import { Box, Container, HStack, IconButton, Stack, useColorModeValue, useDisclosure } from "@chakra-ui/react";
 import Link from "next/link";
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 import Logo from "./Logo";
 import { css } from '@emotion/react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 const Links = [
