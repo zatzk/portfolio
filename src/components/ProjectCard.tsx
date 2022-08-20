@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { Box, Flex, Heading, Icon, List, ListItem, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
@@ -29,6 +30,7 @@ export const ProjectCard = ({
   tools,
   proto,
   repo,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   ...props
 }) => {
   return (
