@@ -5,6 +5,8 @@ import { Navbar } from '../components/Navbar'
 import Head from 'next/head'
 import { SocialsBar } from '../components/SocialsBar'
 import { AboutText } from '../components/AboutText'
+import { Btn } from '../components/Button'
+import { Link } from '@chakra-ui/react'
 
 
 const about = () => (
@@ -19,7 +21,7 @@ const about = () => (
         <meta property="og:site_name" content="zatzk's portfolio" />
         <meta name="og:title" content="zatzk's portfolio" />
         <meta property="og:type" content="website" />
-        <title>zatzk's portfolio - About me</title>
+        <title>zatzk&#39;s portfolio - About me</title>
       </Head>
 
     <Navbar />
@@ -27,6 +29,11 @@ const about = () => (
     <Container pt={14}>
       <Main >
         <AboutText />
+        <Link href = "mailto: zatzk.cnt@outlook.com">
+          <Btn  >
+            GET IN TOUCH!
+          </Btn>
+        </Link>
       </Main>
 
       <Footer />
