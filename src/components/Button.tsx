@@ -13,14 +13,14 @@ export function Btn(props: ButtonProps) {
         justifyContent="center"
       >
         <Button
-          textDecor="none"
+          textDecoration="none"
           letterSpacing="4px"
           justifyContent="center"
           display="inline-flex"
           padding="15px 20px"
           position="relative"
           variant='ghost'
-          {...props} />
+          {...props} /> 
         </Flex>
     </Container>
   )
