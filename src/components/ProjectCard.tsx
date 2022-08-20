@@ -66,9 +66,9 @@ export const ProjectCard = ({
 
             >
             {proto && (
-              <Box as="a" href={proto} pr="15px" _hover={{ color: '#04E0D9' }} transitionDuration="300ms" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiExternalLink size={22} /></motion.div></Box>
+              <Box as="a" href={proto} target="_blank" pr="15px" _hover={{ color: '#04E0D9' }} transitionDuration="300ms" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiExternalLink size={22} /></motion.div></Box>
               )}
-            <Box as="a" href={repo} _hover={{ color: '#04E0D9' }} transitionDuration="300ms" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiGithub size={22} /></motion.div></Box>
+            <Box as="a" href={repo} target="_blank" _hover={{ color: '#04E0D9' }} transitionDuration="300ms" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiGithub size={22} /></motion.div></Box>
           </Flex>
 
           <motion.div>

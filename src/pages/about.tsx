@@ -6,7 +6,7 @@ import Head from 'next/head'
 import { SocialsBar } from '../components/SocialsBar'
 import { AboutText } from '../components/AboutText'
 import { Btn } from '../components/Button'
-import { Link } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 
 const about = () => (
@@ -29,11 +29,11 @@ const about = () => (
     <Container pt={14}>
       <Main >
         <AboutText />
-        <Link href = "mailto: zatzk.cnt@outlook.com">
           <Btn  >
-            GET IN TOUCH
+            <Box as="a" textDecoration="none" href = "mailto: zatzk.cnt@outlook.com" target="_blank">
+               GET IN TOUCH
+            </Box>
           </Btn>
-        </Link>
       </Main>
 
       <Footer />
