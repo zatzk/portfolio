@@ -16,7 +16,7 @@ export default [
     title: 'My Portfolio Website',
     description: 'This portfolio website! Built with react next.js, chakra-ui and framer-motion',
     tools: [react, nextjs, typescript, chakra, framer],
-    proto: null,
+    proto: 'https://portfolio-zatzk.vercel.app',
     repo: 'https://github.com/zatzk/portfolio',
     id: uuidv4(),
   },
