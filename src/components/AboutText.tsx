@@ -55,7 +55,7 @@ export function AboutText() {
               <Box  pb="35px" display="inline-block">
                 <Text>
                   Hey there! My name is Jean Luiz, also known in the web as zatzk. 
-                  I&#39;m a software engineering&#39;s student at Instituto Federal da Bahia (IFBA) 
+                  I&#39;m a software engineering student at Instituto Federal da Bahia (IFBA) 
                   and a self-taught designer and artist.
                 </Text>
               </Box>
