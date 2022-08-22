@@ -17,6 +17,10 @@ const Links = [
     name: "ABOUT",
     path: "/about",
   },
+  {
+    name: "CV",
+    path: "/resume.pdf",
+  },
   
 ];
 
