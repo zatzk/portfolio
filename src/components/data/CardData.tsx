@@ -9,6 +9,8 @@ import {
   js,
   heroku,
   json,
+  tailwind,
+  astrojs,
 } from './tools';
 
 export default [
@@ -29,11 +31,19 @@ export default [
     id: uuidv4(),
   },
   {
-    title: 'geradorDeGatinho-API',
+    title: 'catsGenerator-API',
     description: 'An mock api database of cats memes. This project was built to be originally used by the discord bot "senjougahara bot"',
     tools: [nodejs, js, heroku, json],
     proto: null,
     repo: 'https://github.com/zatzk/geradorDeGatinho-API',
+    id: uuidv4(),
+  },
+  {
+    title: 'webpage discord bot',
+    description: 'An webpage built entirely with astrojs and tailwindcss to my senjougahara discord bot"',
+    tools: [astrojs, typescript, tailwind],
+    proto: null,
+    repo: 'https://github.com/zatzk/senjougaharabot-website',
     id: uuidv4(),
   },
   
