@@ -26,7 +26,7 @@ export default [
   },
   {
     icon: SiDiscord,
-    href: 'discord.com/users/200665359626272769',
+    href: 'https://discord.com/users/200665359626272769',
     name: 'discord',
     color: '#04E0D9',
     id: uuidv4(),
