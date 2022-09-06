@@ -10,7 +10,7 @@ import {
   heroku,
   json,
   tailwind,
-  astrojs,
+  html5,
 } from './tools';
 
 export default [
@@ -41,7 +41,7 @@ export default [
   {
     title: 'webpage discord bot',
     description: 'An webpage built entirely with astrojs and tailwindcss to my senjougahara discord bot"',
-    tools: [astrojs, typescript, tailwind],
+    tools: [html5, typescript, tailwind],
     proto: null,
     repo: 'https://github.com/zatzk/senjougaharabot-website',
     id: uuidv4(),
