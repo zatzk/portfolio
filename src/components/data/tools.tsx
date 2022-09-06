@@ -16,9 +16,16 @@ import {
   SiFramer,
   SiHeroku,
   SiJson,
+  SiTailwindcss,
 } from 'react-icons/si';
 import { v4 as uuidv4 } from 'uuid';
 
+export const tailwind = {
+  name: 'tailwind',
+  icon: SiTailwindcss,
+  color: '#0FB6D6',
+  id: uuidv4()
+};
 export const json = {
   name: 'json',
   icon: SiJson,
