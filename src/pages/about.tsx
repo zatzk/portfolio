@@ -14,7 +14,7 @@ const about = () => (
   <Container height="100%">
     <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="zatzk's homepage" />
+        <meta name="description" content="zatzk's aboutpage" />
         <meta name="author" content="Jean Luiz" />
         <meta name="author" content="zatzk" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
