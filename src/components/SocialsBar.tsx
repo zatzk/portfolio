@@ -39,6 +39,7 @@ SocialsCard.propTypes = {
   icon: PropTypes.element.isRequired,
   href: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 
 }
 
