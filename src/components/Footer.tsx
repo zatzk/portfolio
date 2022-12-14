@@ -10,6 +10,6 @@ export const Footer = () => (
     pb="20px"
     mt="80px"
     >
-       &copy; {new Date().getFullYear()} Jean Luiz. All Rights Reserved.
+       &copy; {new Date().getFullYear()} Jean Luiz / zatzk. All Rights Reserved.
   </Box>
 )
