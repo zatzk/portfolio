@@ -16,8 +16,8 @@ const LogoBox = styled.span`
   `
 
 const Logo = () => {
-  //const logoImg = `/images/logo${useColorModeValue('', '-dark')}.png`
-  const logoImg =  `https://i.imgur.com${useColorModeValue('/4rbdnFL','/PiLt6pp',)}.png`
+  const logoImg = `/images/logo${useColorModeValue('', '-dark')}.png`
+  //const logoImg =  `https://i.imgur.com${useColorModeValue('/4rbdnFL','/PiLt6pp',)}.png`
 
 
   return (
