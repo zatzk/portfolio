@@ -11,6 +11,7 @@ import {
   json,
   tailwind,
   html5,
+  astro,
 } from './tools';
 
 export default [
@@ -23,7 +24,7 @@ export default [
     id: uuidv4(),
   },
   {
-    title: 'Senjougahara bot',
+    title: 'Senjougahara bot JS',
     description: 'A fun multipurpose discord bot that can do memes, translation and music, built with javascript',
     tools: [js, nodejs],
     proto: 'https://senjougaharabot-website.vercel.app',
@@ -49,7 +50,7 @@ export default [
   {
     title: 'senjougahara webpage',
     description: 'An webpage built entirely with astrojs and tailwindcss to my senjougahara discord bot"',
-    tools: [html5, typescript, tailwind],
+    tools: [astro, typescript, tailwind],
     proto: 'https://senjougaharabot-website.vercel.app',
     repo: 'https://github.com/zatzk/senjougaharabot-website',
     id: uuidv4(),
