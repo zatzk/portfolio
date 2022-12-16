@@ -15,7 +15,7 @@ const boxCardVariants = {
     boxShadow: "0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4",
     borderRadius: "5px",
   },
-  
+
 }
 const textVariants = {
   hoverIconLink: {
@@ -35,26 +35,26 @@ export const ProjectCard = ({
 }) => {
   return (
     <motion.div
-    initial="initial"
-    whileHover="hover"
-    whileTap="hover"
-    variants={boxCardVariants}
-    transition={{
-      ease: 'easeOut',
-      delay: 0.15,
-    }}
-  >
-    <Flex
-      display="flex"
-      justifyContent="space-between"
-      flexDirection="column"
-      alignItems="flex-start"
-      padding="2rem 1.75rem"
-      position="relative"
-      bg="#292929"
-      height="20em"
-      borderRadius="5px"
-      bgGradient="linear(to-b, bgCardColor1, bgCardColor2)"
+      initial="initial"
+      whileHover="hover"
+      whileTap="hover"
+      variants={boxCardVariants}
+      transition={{
+        ease: 'easeOut',
+        delay: 0.15,
+      }}
+    >
+      <Flex
+        display="flex"
+        justifyContent="space-between"
+        flexDirection="column"
+        alignItems="flex-start"
+        padding="2rem 1.75rem"
+        position="relative"
+        bg="#292929"
+        height="20em"
+        borderRadius="5px"
+        bgGradient="linear(to-b, bgCardColor1, bgCardColor2)"
       >
         <Box as="header" display="block">
           <Flex
@@ -63,33 +63,74 @@ export const ProjectCard = ({
             justifyContent="flex-end"
             alignItems="center"
             mb="35px"
-
-            >
+          >
             {proto && (
-              <Box as="a" href={proto} target="_blank" pr="15px" _hover={{ color: '#04E0D9' }} transitionDuration="300ms" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiExternalLink size={22} /></motion.div></Box>
-              )}
-            <Box as="a" href={repo} target="_blank" _hover={{ color: '#04E0D9' }} transitionDuration="300ms" ><motion.div whileTap="hoverIconLink" whileHover="hoverIconLink" variants={textVariants}><FiGithub size={22} /></motion.div></Box>
+              <Box
+                as="a"
+                href={proto}
+                target="_blank"
+                pr="15px"
+                _hover={{ color: '#04E0D9' }}
+                transitionDuration="300ms"
+              >
+                <motion.div
+                  whileTap="hoverIconLink"
+                  whileHover="hoverIconLink"
+                  variants={textVariants}
+                >
+                  <FiExternalLink size={22} />
+                </motion.div>
+              </Box>
+            )}
+
+            <Box
+              as="a"
+              href={repo}
+              target="_blank"
+              _hover={{ color: '#04E0D9' }}
+              transitionDuration="300ms"
+            >
+              <motion.div
+                whileTap="hoverIconLink"
+                whileHover="hoverIconLink"
+                variants={textVariants}
+              >
+                <FiGithub size={22} />
+              </motion.div>
+            </Box>
           </Flex>
 
           <motion.div>
-            <Heading _hover={{ color: '#04E0D9' }} transitionDuration="300ms" position="static" fontSize="22px" lineHeight="1.1" mb="10px" >
+            <Heading
+              //_hover={{color: "hoverColor"}}
+              transitionDuration="300ms"
+              position="static"
+              fontSize="22px"
+              lineHeight="1.1"
+              mb="10px"
+              textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+            >
               {title}
             </Heading>
           </motion.div>
 
-          <Text position="relative"  fontSize="sm">
+          <Text
+            position="relative"
+            fontSize="sm"
+            textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+          >
             {description}
-          </Text> 
+          </Text>
         </Box>
 
-        
+
         <Box
           as="footer"
           display="block"
         >
           <List display="flex" flexDirection="row" alignItems="flex-end" flexGrow="1" flexWrap="wrap" mt="20px">
             {tools.map((tool) => (
-              <motion.a whileHover={{scale: 1.1}}>
+              <motion.a whileHover={{ scale: 1.1 }}>
 
                 <ListItem key={tool.id} p="0.5rem">
                   <Icon
@@ -98,21 +139,19 @@ export const ProjectCard = ({
                     boxSize="1.5rem"
                     as={tool.icon}
                     _hover={{ fill: tool.color }}
-                    />
+                  />
                 </ListItem>
               </motion.a>
             ))}
           </List>
-
-
         </Box>
-      
+
 
       </Flex>
-  </motion.div>
+    </motion.div>
   );
 };
- 
+
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
