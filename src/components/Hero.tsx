@@ -33,6 +33,7 @@ export function Hero() {
         fontWeight="bold"
         fontStyle="normal" 
         fontSize={{base: 50, md: 80, lg: 90}}
+        textShadow="rgb(255 215 77 / 5%) -1px -1px 6px, rgb(124 127 255 / 5%) 1px 1px 6px"
         >
           <WavyText text="hi, im zatzk" replay={replay}/>
         </Box>
@@ -45,6 +46,7 @@ export function Hero() {
           fontWeight="bold" 
           fontStyle="normal" 
           fontSize={{base: 15, md: 20, lg: 30}}
+          textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
         >
           {showComponent && <WavyText text="Developer" replay={replay}/>}
           
