@@ -54,9 +54,9 @@ export function AboutText() {
             <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 0.3, duration: 0.8}}>
               <Box  pb="35px" display="inline-block">
                 <Text>
-                  Hey there! My name is Jean Luiz, also known in the web as zatzk. 
+                  Hey there! My name is Jean Luiz, also known by the handle zatzk. 
                   I&#39;m a software engineering student at Instituto Federal da Bahia (IFBA) 
-                  and a self-taught designer and artist.
+                  and a self-taught designer and digital artist.
                 </Text>
               </Box>
             </motion.a>
