@@ -16,6 +16,7 @@ import {
   SiFramer,
   SiHeroku,
   SiJson,
+  SiLeaflet,
   SiTailwindcss,
 } from 'react-icons/si';
 import { v4 as uuidv4 } from 'uuid';
@@ -40,6 +41,12 @@ export const astro = {
   name: 'astro',
   icon: astroIcon,
   color: '#FF0000',
+  id: uuidv4()
+};
+export const leaflet = {
+  name: 'leaflet',
+  icon: SiLeaflet,
+  color: '#0fd620',
   id: uuidv4()
 };
 export const tailwind = {
