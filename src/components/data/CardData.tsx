@@ -59,7 +59,7 @@ export default [
   },
   {
     title: 'santa tracker',
-    description: 'a santa tracker for christmas built with nextjs leaflet',
+    description: 'a santa tracker for christmas built with nextjs and leaflet using 2019 google data api',
     tools: [nextjs, sass, leaflet],
     proto: 'http://santa-tracking-app.vercel.app/',
     repo: 'https://github.com/zatzk/santa-tracking-app',
