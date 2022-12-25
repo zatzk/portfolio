@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import {
   chakra,
   nextjs,
+  leaflet,
   nodejs,
   react,
   typescript,
@@ -11,6 +12,7 @@ import {
   json,
   tailwind,
   html5,
+  sass,
   astro,
 } from './tools';
 
@@ -41,7 +43,7 @@ export default [
   },
   {
     title: 'geradordegatinhos-API',
-    description: 'An mock api database of cats memes. This project was built to be originally used by the discord bot "senjougahara bot"',
+    description: 'An mock api database of cats memes. This project was built to be originally used by the discord bot "senjougahara bot',
     tools: [nodejs, js, heroku, json],
     proto: null,
     repo: 'https://github.com/zatzk/geradorDeGatinho-API',
@@ -49,10 +51,18 @@ export default [
   },
   {
     title: 'senjougahara webpage',
-    description: 'An webpage built entirely with astrojs and tailwindcss to my senjougahara discord bot"',
+    description: 'An webpage built entirely with astrojs and tailwindcss to my senjougahara discord bot',
     tools: [astro, typescript, tailwind],
     proto: 'https://senjougaharabot-website.vercel.app',
     repo: 'https://github.com/zatzk/senjougaharabot-website',
+    id: uuidv4(),
+  },
+  {
+    title: 'santa tracker',
+    description: 'a santa tracker for christmas built with nextjs leaflet',
+    tools: [nextjs, sass, leaflet],
+    proto: 'http://santa-tracking-app.vercel.app/',
+    repo: 'https://github.com/zatzk/santa-tracking-app',
     id: uuidv4(),
   },
   
