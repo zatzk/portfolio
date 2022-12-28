@@ -26,14 +26,6 @@ export default [
     id: uuidv4(),
   },
   {
-    title: 'Senjougahara bot JS',
-    description: 'A fun multipurpose discord bot that can do memes, translation and music, built with javascript',
-    tools: [js, nodejs],
-    proto: 'https://senjougaharabot-website.vercel.app',
-    repo: 'https://github.com/zatzk/senjougaharaBot-JS',
-    id: uuidv4(),
-  },
-  {
     title: 'Senjougahara bot TS',
     description: 'A fun multipurpose discord bot that can do memes, translation and music, built with typescript',
     tools: [typescript, nodejs],
