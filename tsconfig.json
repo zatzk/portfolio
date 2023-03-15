@@ -23,8 +23,14 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/components/Navbar.tsx", "src/pages/index.tsx", "src/components/Main.tsxx", "src/components/Logo.tsx", "src/components/Hero.js", "src/components/Main.js"  ],
+    "**/*.tsx", 
+    "src/components/Navbar.tsx", 
+    "src/pages/index.tsx", 
+    "src/components/Main.tsx", 
+    "src/components/Logo.tsx", 
+    "src/components/Hero.js", 
+    "src/components/Main.js"
+  ],
   "exclude": [
     "node_modules"
   ]
