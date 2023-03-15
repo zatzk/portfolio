@@ -22,21 +22,19 @@ const Logo = () => {
 
   return (
     <Link  href="/" scroll={false}>
-      <a>
-        <motion.button whileHover={{ scale: 1.2 }}>
-          
-          <LogoBox>
-            <Image 
-              src={logoImg}
-              width={25} 
-              height={15}
-              
-              alt="logo" 
-              />
+      <motion.button whileHover={{ scale: 1.2 }}>
+        
+        <LogoBox>
+          <Image 
+            src={logoImg}
+            width={25} 
+            height={15}
             
-          </LogoBox>
-        </motion.button>
-      </a>
+            alt="logo" 
+            />
+          
+        </LogoBox>
+      </motion.button>
     </Link>
   )
 }
