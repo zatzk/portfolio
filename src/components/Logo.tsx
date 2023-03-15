@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 const LogoBox = styled.span`
   display: inline-flex;
   align-items: center;
-  line-hight: 10px;
+  line-height: 10px;
   padding: 18px;
   
   img {
@@ -17,8 +17,7 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   const logoImg = `/images/logo${useColorModeValue('', '-dark')}.png`
-  //const logoImg =  `https://i.imgur.com${useColorModeValue('/4rbdnFL','/PiLt6pp',)}.png`
-
+  
 
   return (
     <Link  href="/" scroll={false}>
