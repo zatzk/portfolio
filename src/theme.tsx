@@ -17,11 +17,11 @@ const theme = extendTheme({
       },
       heroGradientStart: {
         default: '#7928CA',
-        _dark: '#D941B6',
+        _dark: '#7928CA',
       },
       heroGradientEnd: {
         default: '#03e9f4',
-        _dark: '#fbec8f',
+        _dark: '#03e9f4',
       },
       bgCardColor1: {
         default: 'gray.100',
