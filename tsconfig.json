@@ -18,18 +18,27 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["@emotion/react/types/css-prop"]
+    "types": [
+      "@emotion/react/types/css-prop"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", 
-    "src/components/Navbar.tsx", 
-    "src/pages/index.tsx", 
-    "src/components/Main.tsx", 
-    "src/components/Logo.tsx", 
-    "src/components/Hero.js", 
-    "src/components/Main.js"
+    "**/*.tsx",
+    "src/components/Navbar.tsx",
+    "src/pages/index.tsx",
+    "src/components/Main.tsx",
+    "src/components/Logo.tsx",
+    "src/components/Hero.js",
+    "src/components/Main.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
