@@ -3,7 +3,7 @@ import { Container, SimpleGrid } from '@chakra-ui/react'
 import { motion } from 'framer-motion';
 import React from "react";
 import { ProjectCard } from './ProjectCard';
-import CardData from './data/CardData';
+import CardData from '../data/CardData';
 
 export function Projects() {
 

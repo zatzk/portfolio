@@ -14,7 +14,7 @@ import {
   html5,
   sass,
   astro,
-} from './tools';
+} from '../data/Tools';
 
 export default [
   {
