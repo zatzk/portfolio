@@ -3,17 +3,36 @@ import "@fontsource/karla"
 import "@fontsource/roboto"
 import "@fontsource/jetbrains-mono"
 
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
+
 const fonts = { primary: 'Karla', 
                 secondary: 'JetBrains Mono'
               }
 
 
 const theme = extendTheme({
+  styles: {
+    global: (props) => ({
+      'html, body': {
+        backgroundColor: props.colorMode === 'dark' ? 'bgColor' : 'bgColor',
+      },
+      'h2, a': {
+        color: props.colorMode === 'dark' ? '#d5ded7' : '#242430',
+      },
+    }),
+  },
   semanticTokens: {
     colors: {
-      text: {
-        default: '#16161D',
-        _dark: '#ade3b8',
+      bgColor: {
+        default: 'gray.50',
+        _dark: 'gray.900',
+      },
+      textColor: {
+        default: '#000',
+        _dark: '#FFF'
       },
       heroGradientStart: {
         default: '#7928CA',
@@ -25,25 +44,16 @@ const theme = extendTheme({
       },
       bgCardColor1: {
         default: 'gray.100',
-        _dark: '#292929',
+        _dark: 'gray.800',
       },
       bgCardColor2: {
         default: 'gray.200',
-        _dark: '#292929',
+        _dark: 'gray.900',
       },
       hoverColor: {
         default: '#0F5',
           _dark: '#04E0D9',
       },
-    },
-    // boxShadow: {
-    //   shBox: {
-    //     default: '0 0 5px #D941B6, 0 0 25px #D941B6, 0 0 50px #D941B6, 0 0 200px #D941B6',
-    //     _dark: '0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4',
-    //   },
-    // },
-    radii: {
-      button: '12px',
     },
   },
   fonts,
