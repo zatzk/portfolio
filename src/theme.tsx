@@ -27,7 +27,7 @@ const theme = extendTheme({
   semanticTokens: {
     colors: {
       bgColor: {
-        default: 'gray.50',
+        default: 'gray.100',
         _dark: 'gray.900',
       },
       textColor: {
@@ -44,11 +44,11 @@ const theme = extendTheme({
       },
       bgCardColor1: {
         default: 'gray.100',
-        _dark: 'gray.800',
+        _dark: 'gray.900',
       },
       bgCardColor2: {
         default: 'gray.200',
-        _dark: 'gray.900',
+        _dark: 'gray.800',
       },
       hoverColor: {
         default: '#0F5',
