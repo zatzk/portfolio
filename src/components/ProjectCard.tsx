@@ -11,8 +11,8 @@ const boxCardVariants = {
   hover: {
     opacity: 1,
     scale: 1.02,
-    y: -10,
-    boxShadow: "0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4",
+    y: -3,
+    boxShadow: "0 0 5px #03e9f4, 0 0 5px #03e9f4, 0 0 5px #03e9f4, 0 0 5px #03e9f4",
     borderRadius: "5px",
   },
 
@@ -51,7 +51,6 @@ export const ProjectCard = ({
         alignItems="flex-start"
         padding="2rem 1.75rem"
         position="relative"
-        bg="#292929"
         height="20em"
         borderRadius="5px"
         bgGradient="linear(to-b, bgCardColor1, bgCardColor2)"
