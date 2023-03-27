@@ -69,59 +69,71 @@ export function Projects() {
       flexWrap="wrap"
       alignContent="center"
     >
-      <Tabs variant="unstyled" css={emotionStyles}
-        marginTop="1rem"  
-        marginBottom="1.3rem"  
+      <motion.div
+        initial={{ y: -400, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          ease: "easeOut",
+          delay: 2,
+        }}
       >
-        <TabList
-          borderBottom="none"
+        <Tabs variant="unstyled" css={emotionStyles}
+          marginTop="1rem"  
+          marginBottom="1.3rem"  
         >
-          <Tab
-            fontFamily="primary"
-            fontStyle="normal"
-            fontWeight="300"
-            name="ALL"
-            onClick={(event) => {
-              handleChange(event.currentTarget.name);
-            }}
+          <TabList
+            borderBottom="none"
           >
-            ALL
-          </Tab>
-          <Tab
-            fontFamily="primary"
-            fontStyle="normal"
-            fontWeight="300"
-            name="FRONTEND"
-            onClick={(event) => {
-              handleChange(event.currentTarget.name);
-            }}
-          >
-            FRONTEND
-          </Tab>
-          <Tab
-            fontFamily="primary"
-            fontStyle="normal"
-            fontWeight="300"
-            name="BACKEND"
-            onClick={(event) => {
-              handleChange(event.currentTarget.name);
-            }}
-          >
-            BACKEND
-          </Tab>
-          <Tab
-            fontFamily="primary"
-            fontStyle="normal"
-            fontWeight="300"
-            name="MOBILE"
-            onClick={(event) => {
-              handleChange(event.currentTarget.name);
-            }}
+            <Tab
+              fontFamily="primary"
+              fontStyle="normal"
+              fontWeight="300"
+              name="ALL"
+              onClick={(event) => {
+                handleChange(event.currentTarget.name);
+              }}
             >
-            MOBILE
-          </Tab>
-        </TabList>
-      </Tabs>
+              ALL
+            </Tab>
+            <Tab
+              fontFamily="primary"
+              fontStyle="normal"
+              fontWeight="300"
+              name="FRONTEND"
+              onClick={(event) => {
+                handleChange(event.currentTarget.name);
+              }}
+            >
+              FRONTEND
+            </Tab>
+            <Tab
+              fontFamily="primary"
+              fontStyle="normal"
+              fontWeight="300"
+              name="BACKEND"
+              onClick={(event) => {
+                handleChange(event.currentTarget.name);
+              }}
+            >
+              BACKEND
+            </Tab>
+            <Tab
+              fontFamily="primary"
+              fontStyle="normal"
+              fontWeight="300"
+              name="MOBILE"
+              onClick={(event) => {
+                handleChange(event.currentTarget.name);
+              }}
+              >
+              MOBILE
+            </Tab>
+          </TabList>
+        </Tabs>
+      </motion.div>
 
       <motion.div
         initial={{ y: -200, opacity: 0 }}
