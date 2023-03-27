@@ -3,25 +3,40 @@ import { Box, Flex, Heading, Icon, List, ListItem, Text } from '@chakra-ui/react
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { useColorMode } from "@chakra-ui/react";
 
-const boxCardVariants = {
-  initial: {
-    opacity: 1
-  },
-  hover: {
-    opacity: 1,
-    scale: 1.02,
-    y: -10,
-    boxShadow: "0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4",
-    borderRadius: "5px",
-  },
+const useBoxCardVariants = () => {
+  const { colorMode } = useColorMode();
 
-}
-const textVariants = {
-  hoverIconLink: {
+  const boxCardVariants = {
+    initial: {
+      opacity: 1,
+    },
+    hover: {
+      opacity: 1,
+      scale: 1.02,
+      y: -4,
+      boxShadow: colorMode === 'dark' ?
+       "0 0 10px #03e9f4, 0 0 10px #03e9f4, 0 0 10px #03e9f4, 0 0 10px #03e9f4"
+       :
+       "0 0 10px #9D72FF, 0 0 10px #9D72FF, 0 0 10px #9D72FF, 0 0 10px #9D72FF",
+      borderRadius: "5px",
+    },
+  }
+  const iconCardVariants = {
+    initial: {
     opacity: 1,
-    scale: 1.1
-  },
+    },
+    hover: {
+      scale: 1.1,
+      color: colorMode === 'dark' ? '#04E0D9' : '#9D72FF',
+    },
+    exit: {
+      color: colorMode === 'dark' ? '#fff' : '#000',
+    },
+  }
+  return {boxCardVariants, iconCardVariants}
+  
 }
 
 export const ProjectCard = ({
@@ -33,8 +48,12 @@ export const ProjectCard = ({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   ...props
 }) => {
+
+  const {boxCardVariants, iconCardVariants} = useBoxCardVariants();
+  
   return (
     <motion.div
+      color='textColor'
       initial="initial"
       whileHover="hover"
       whileTap="hover"
@@ -51,7 +70,6 @@ export const ProjectCard = ({
         alignItems="flex-start"
         padding="2rem 1.75rem"
         position="relative"
-        bg="#292929"
         height="20em"
         borderRadius="5px"
         bgGradient="linear(to-b, bgCardColor1, bgCardColor2)"
@@ -70,13 +88,14 @@ export const ProjectCard = ({
                 href={proto}
                 target="_blank"
                 pr="15px"
-                _hover={{ color: '#04E0D9' }}
+                // _hover={{ color: '#04E0D9' }}
                 transitionDuration="300ms"
               >
                 <motion.div
-                  whileTap="hoverIconLink"
-                  whileHover="hoverIconLink"
-                  variants={textVariants}
+                  initial="initial"
+                  whileHover="hover"
+                  whileTap="hover"
+                  variants={iconCardVariants}
                 >
                   <FiExternalLink size={22} />
                 </motion.div>
@@ -87,13 +106,14 @@ export const ProjectCard = ({
               as="a"
               href={repo}
               target="_blank"
-              _hover={{ color: '#04E0D9' }}
+              // _hover={{ color: '#04E0D9' }}
               transitionDuration="300ms"
             >
               <motion.div
-                whileTap="hoverIconLink"
-                whileHover="hoverIconLink"
-                variants={textVariants}
+                initial="initial"
+                whileHover="hover"
+                whileTap="hover"
+                variants={iconCardVariants}
               >
                 <FiGithub size={22} />
               </motion.div>
