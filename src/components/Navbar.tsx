@@ -6,7 +6,7 @@ import { DarkModeSwitch } from "./DarkModeSwitch";
 import Logo from "./Logo";
 import { css } from '@emotion/react'
 import { motion } from 'framer-motion'
-
+import { useColorMode } from "@chakra-ui/react";
 
 const Links = [
   {
@@ -25,15 +25,14 @@ const Links = [
 ];
 
 
-const btn = css`
-  a {
-    text-decoration: none;
-    letter-spacing: 4px;
-    display: inline-flex;
-    padding: 15px 20px;
-    position: relative;
-    margin-right: 10px;
-  }
+
+const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
+  const { colorMode } = useColorMode();
+  const boxShadowColor = colorMode === "light" ? "#FF61BE" : "#03e9f4";
+  const background = colorMode === "light" ? "#FF61BE" : "#03e9f4";
+  const boxShadow = `0 0 5px ${boxShadowColor}, 0 0 25px ${boxShadowColor}, 0 0 50px ${boxShadowColor}, 0 0 200px ${boxShadowColor}`;
+
+  const btn = css`
   a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -42,10 +41,10 @@ const btn = css`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #03e9f4;
+    background: ${background};
     transition: width 0.2s ease 0s, left 0.2s ease 0s;
     width: 0;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    box-shadow: ${boxShadow};
     
   }
   a:hover:after { 
@@ -54,23 +53,28 @@ const btn = css`
     
   }
 `
-
-
-const NavLink = ({ children, path }: { children: ReactNode; path: string }) => (    
-  <motion.div whileHover={{ scale: 1.2 }}
-  >
-    <Box css={[btn]}
-        > 
-        
-        <Link  href={path}>{children}</Link>
-    </Box>
-  </motion.div>  
-);
+  return (    
+    <motion.div whileHover={{ scale: 1.2 }}>
+      <Box 
+        textDecoration="none"
+        letterSpacing="4px"
+        display="inline-flex"
+        padding="15px 20px"
+        position="relative"
+        marginRight="10px"
+        css={[btn]}
+        >    
+        <Link href={path}>{children}</Link>
+      </Box>
+    </motion.div>  
+  );
+}
 
 
 export function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
+
+
   return(
     
     <Box  

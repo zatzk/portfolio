@@ -11,8 +11,16 @@ import { ProjectCard } from "./ProjectCard";
 import CardData from "../data/CardData";
 import { useState } from "react";
 import { css } from "@emotion/react";
+import { useColorMode } from "@chakra-ui/react";
 
-const emotionStyles = css`
+
+export function Projects() {
+  const { colorMode } = useColorMode();
+  const boxShadowColor = colorMode === "light" ? "#FF61BE" : "#03e9f4";
+  const background = colorMode === "light" ? "#FF61BE" : "#03e9f4";
+  const boxShadow = `0 0 5px ${boxShadowColor}, 0 0 25px ${boxShadowColor}, 0 0 50px ${boxShadowColor}, 0 0 200px ${boxShadowColor}`;
+
+  const emotionStyles = css`
   .chakra-tabs__tab {
     text-decoration: none;
     display: inline-flex;
@@ -33,10 +41,10 @@ const emotionStyles = css`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #03e9f4;
+    background: ${background};
     transition: width 0.2s ease 0s, left 0.2s ease 0s;
     width: 0;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    box-shadow: ${boxShadow};
     
   }
   .chakra-tabs__tab:hover:after { 
@@ -49,7 +57,7 @@ const emotionStyles = css`
     left: 0;    
   }
 `;
-export function Projects() {
+
   const [stack, setStack] = useState("ALL");
 
   function handleChange(id) {
