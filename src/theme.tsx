@@ -20,7 +20,7 @@ const theme = extendTheme({
         backgroundColor: props.colorMode === 'dark' ? 'bgColor' : 'bgColor',
       },
       'h2, a': {
-        color: props.colorMode === 'dark' ? '#d5ded7' : '#242430',
+        color: props.colorMode === 'dark' ? '#d5ded7' : '#3a3a40',
       },
     }),
   },
@@ -31,8 +31,8 @@ const theme = extendTheme({
         _dark: 'gray.900',
       },
       textColor: {
-        default: '#000',
-        _dark: '#FFF'
+        default: '#3a3a40',
+        _dark: '#d5ded7'
       },
       heroGradientStart: {
         default: '#7928CA',
