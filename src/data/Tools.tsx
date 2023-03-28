@@ -18,10 +18,17 @@ import { Storybook } from "@styled-icons/simple-icons/Storybook";
 import { Adobe } from "@styled-icons/simple-icons/Adobe";
 import { Socketdotio } from "@styled-icons/simple-icons/Socketdotio";
 import { Sass } from "@styled-icons/simple-icons/Sass";
+import { Netlify } from "@styled-icons/simple-icons/Netlify";
 
 import { v4 as uuidv4 } from 'uuid';
 
 
+export const netlify = {
+  name: 'netlify',
+  icon: Netlify,
+  color: '#13eed4',
+  id: uuidv4()
+};
 export const astro = {
   name: 'astro',
   icon: Astro,

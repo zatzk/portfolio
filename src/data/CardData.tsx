@@ -8,12 +8,11 @@ import {
   typescript,
   framer,
   js,
-  heroku,
   json,
   tailwind,
-  html5,
   sass,
   astro,
+  netlify,
 } from '../data/Tools';
 
 export default [
@@ -38,7 +37,7 @@ export default [
   {
     title: 'geradordegatinhos-API',
     description: 'An mock api database of cats memes. This project was built to be originally used by the discord bot "senjougahara bot',
-    tools: [nodejs, js, heroku, json],
+    tools: [nodejs, js, netlify, json],
     proto: null,
     repo: 'https://github.com/zatzk/geradorDeGatinho-API',
     typeProject: ["BACKEND"],
