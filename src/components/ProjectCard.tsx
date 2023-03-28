@@ -76,7 +76,7 @@ export const ProjectCard = ({
                 as="a"
                 fontFamily="primary"
                 fontSize="14px"
-                textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+                // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
                 >
                   {type} 
                 </Box>
@@ -134,7 +134,7 @@ export const ProjectCard = ({
               fontSize="22px"
               lineHeight="1.1"
               mb="10px"
-              textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+              // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
             >
               {title}
             </Heading>
@@ -143,7 +143,7 @@ export const ProjectCard = ({
           <Text
             position="relative"
             fontSize="sm"
-            textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+            // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
           >
             {description}
           </Text>

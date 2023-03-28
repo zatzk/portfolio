@@ -90,7 +90,7 @@ export function Navbar() {
           fontStyle="normal"
           fontWeight="300"
           fontSize="13.5"
-          textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+          // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
 
           >
           <Logo />
