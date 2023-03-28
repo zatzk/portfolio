@@ -1,5 +1,5 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Container, HStack, IconButton, Stack, useColorModeValue, useDisclosure } from "@chakra-ui/react";
+import { Box, Container, HStack, IconButton, Stack, useDisclosure } from "@chakra-ui/react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { DarkModeSwitch } from "./DarkModeSwitch";

@@ -6,7 +6,7 @@ import {
   TabList,
   Tabs,
 } from "@chakra-ui/react";
-import { AnimatePresence, HTMLMotionProps, motion, MotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { ProjectCard } from "./ProjectCard";
 import CardData from "../data/CardData";
 import { useState } from "react";

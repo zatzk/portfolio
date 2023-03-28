@@ -3,7 +3,6 @@ import { Box, Flex, Heading, Icon, List, ListItem, Text } from '@chakra-ui/react
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-import { Type } from 'styled-icons/feather';
 
 const boxCardVariants = {
   initial: {

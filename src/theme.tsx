@@ -14,6 +14,7 @@ const fonts = { primary: 'Karla',
 
 
 const theme = extendTheme({
+  
   styles: {
     global: (props) => ({
       'html, body': {
@@ -57,6 +58,7 @@ const theme = extendTheme({
     },
   },
   fonts,
+  config,
 })
 
 export default theme

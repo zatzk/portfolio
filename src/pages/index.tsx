@@ -5,7 +5,7 @@ import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import { Projects } from '../components/Projects'
 import { SocialsBar } from '../components/SocialsBar'
-import { HeadTag, HeadProps } from '../components/Head'
+import { HeadTag } from '../components/Head'
 
 interface IndexProps {
   pageTitle: string;

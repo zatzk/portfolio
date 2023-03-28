@@ -1,4 +1,4 @@
-import { Box, useColorModeValue } from "@chakra-ui/react"
+import { useColorModeValue } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import Link from "next/link"
 import Image from 'next/image'
