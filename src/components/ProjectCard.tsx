@@ -30,6 +30,7 @@ export const ProjectCard = ({
   tools,
   proto,
   repo,
+  types,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   ...props
 }) => {
@@ -59,44 +60,69 @@ export const ProjectCard = ({
           <Flex
             display="flex"
             alignContent="center"
-            justifyContent="flex-end"
             alignItems="center"
             mb="35px"
           >
-            {proto && (
+            <Flex
+              display="flex"
+              w="100%"
+              alignContent="center"
+              justifyContent="flex-start"
+              alignItems="center"
+            >
+              {types.map((type) => (
+                <Box
+                as="a"
+                fontFamily="primary"
+                fontSize="14px"
+                // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+                >
+                  {type} 
+                </Box>
+              ))}
+            </Flex>
+
+            <Flex
+              display="flex"
+              alignContent="center"
+              justifyContent="flex-end"
+              alignItems="center"
+            >
+              {proto && (
+                <Box
+                  as="a"
+                  href={proto}
+                  target="_blank"
+                  pr="15px"
+                  _hover={{ color: '#04E0D9' }}
+                  transitionDuration="300ms"
+                >
+                  <motion.div
+                    whileTap="hoverIconLink"
+                    whileHover="hoverIconLink"
+                    variants={textVariants}
+                  >
+                    <FiExternalLink size={22} />
+                  </motion.div>
+                </Box>
+              )}
+
               <Box
                 as="a"
-                href={proto}
+                href={repo}
                 target="_blank"
-                pr="15px"
                 _hover={{ color: '#04E0D9' }}
                 transitionDuration="300ms"
-              >
+                >
                 <motion.div
                   whileTap="hoverIconLink"
                   whileHover="hoverIconLink"
                   variants={textVariants}
-                >
-                  <FiExternalLink size={22} />
+                  >
+                  <FiGithub size={22} />
                 </motion.div>
               </Box>
-            )}
-
-            <Box
-              as="a"
-              href={repo}
-              target="_blank"
-              _hover={{ color: '#04E0D9' }}
-              transitionDuration="300ms"
-            >
-              <motion.div
-                whileTap="hoverIconLink"
-                whileHover="hoverIconLink"
-                variants={textVariants}
-              >
-                <FiGithub size={22} />
-              </motion.div>
-            </Box>
+            </Flex>
           </Flex>
 
           <motion.div>
@@ -107,7 +133,7 @@ export const ProjectCard = ({
               fontSize="22px"
               lineHeight="1.1"
               mb="10px"
-              textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+              // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
             >
               {title}
             </Heading>
@@ -116,7 +142,7 @@ export const ProjectCard = ({
           <Text
             position="relative"
             fontSize="sm"
-            textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+            // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
           >
             {description}
           </Text>
@@ -155,6 +181,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tools: PropTypes.array.isRequired,
+  types: PropTypes.array.isRequired,
   proto: PropTypes.string,
   repo: PropTypes.string.isRequired
 };

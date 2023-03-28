@@ -14,25 +14,26 @@ const fonts = { primary: 'Karla',
 
 
 const theme = extendTheme({
+  
   styles: {
     global: (props) => ({
       'html, body': {
         backgroundColor: props.colorMode === 'dark' ? 'bgColor' : 'bgColor',
       },
       'h2, a': {
-        color: props.colorMode === 'dark' ? '#d5ded7' : '#242430',
+        color: props.colorMode === 'dark' ? '#d5ded7' : '#3a3a40',
       },
     }),
   },
   semanticTokens: {
     colors: {
       bgColor: {
-        default: 'gray.50',
+        default: 'gray.100',
         _dark: 'gray.900',
       },
       textColor: {
-        default: '#000',
-        _dark: '#FFF'
+        default: '#3a3a40',
+        _dark: '#d5ded7'
       },
       heroGradientStart: {
         default: '#7928CA',
@@ -44,11 +45,11 @@ const theme = extendTheme({
       },
       bgCardColor1: {
         default: 'gray.100',
-        _dark: 'gray.800',
+        _dark: 'gray.900',
       },
       bgCardColor2: {
         default: 'gray.200',
-        _dark: 'gray.900',
+        _dark: 'gray.800',
       },
       hoverColor: {
         default: '#0F5',
@@ -57,6 +58,7 @@ const theme = extendTheme({
     },
   },
   fonts,
+  config,
 })
 
 export default theme

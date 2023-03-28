@@ -6,7 +6,7 @@ import {
   TabList,
   Tabs,
 } from "@chakra-ui/react";
-import { AnimatePresence, HTMLMotionProps, motion, MotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { ProjectCard } from "./ProjectCard";
 import CardData from "../data/CardData";
 import { useState } from "react";
@@ -160,6 +160,7 @@ export function Projects() {
               title={data.title}
               description={data.description}
               tools={data.tools}
+              types={data.typeProject}
               proto={data.proto}
               repo={data.repo}
             />
