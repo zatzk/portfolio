@@ -3,26 +3,45 @@ import { Box, Flex, Heading, Icon, List, ListItem, Text } from '@chakra-ui/react
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { useColorMode } from "@chakra-ui/react";
 
-const boxCardVariants = {
-  initial: {
-    opacity: 1
-  },
-  hover: {
-    opacity: 1,
-    scale: 1.02,
-    y: -3,
-    boxShadow: "0 0 5px #03e9f4, 0 0 5px #03e9f4, 0 0 5px #03e9f4, 0 0 5px #03e9f4",
-    borderRadius: "5px",
-  },
+const useBoxCardVariants = () => {
+  const { colorMode } = useColorMode();
 
+  const boxCardVariants = {
+    initial: {
+      opacity: 1,
+    },
+    hover: {
+      opacity: 1,
+      scale: 1.02,
+      y: -4,
+      boxShadow: colorMode === 'dark' ?
+       "0 0 10px #03e9f4, 0 0 10px #03e9f4, 0 0 10px #03e9f4, 0 0 10px #03e9f4"
+       :
+       "0 0 10px #FEC763, 0 0 10px #FF61BE, 0 0 10px #FF61BE, 0 0 10px #FEC763",
+      borderRadius: "5px",
+    },
+  }
+  // const iconCardVariants = {
+  //   initial: {
+  //   opacity: 1,
+  //   },
+  //   hover: {
+  //     scale: 1.1,
+  //   },
+  // }
+  return {boxCardVariants}
+  
 }
+
 const textVariants = {
   hoverIconLink: {
     opacity: 1,
     scale: 1.1
   },
 }
+
 
 export const ProjectCard = ({
   title,
@@ -31,9 +50,10 @@ export const ProjectCard = ({
   proto,
   repo,
   types,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  ...props
 }) => {
+
+  const {boxCardVariants} = useBoxCardVariants();
+
   return (
     <motion.div
       initial="initial"
@@ -94,7 +114,7 @@ export const ProjectCard = ({
                   href={proto}
                   target="_blank"
                   pr="15px"
-                  _hover={{ color: '#04E0D9' }}
+                  _hover={{ color: 'hoverColor' }}
                   transitionDuration="300ms"
                 >
                   <motion.div
@@ -111,7 +131,7 @@ export const ProjectCard = ({
                 as="a"
                 href={repo}
                 target="_blank"
-                _hover={{ color: '#04E0D9' }}
+                _hover={{ color: 'hoverColor' }}
                 transitionDuration="300ms"
                 >
                 <motion.div

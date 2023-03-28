@@ -24,7 +24,7 @@ export const DarkModeSwitch = () => {
           }}
           aria-label="Toggle theme"
           colorScheme={useColorModeValue('white', 'black')}
-          icon={useColorModeValue(<MoonIcon color="black" />, <SunIcon color="white"/>)}
+          icon={useColorModeValue(<MoonIcon color="textColor" />, <SunIcon color="textColor"/>)}
           onClick={toggleColorMode}
         ></IconButton>
       </motion.div>

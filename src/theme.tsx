@@ -36,11 +36,11 @@ const theme = extendTheme({
         _dark: '#d5ded7'
       },
       heroGradientStart: {
-        default: '#7928CA',
+        default: '#FEC763',
         _dark: '#7928CA',
       },
       heroGradientEnd: {
-        default: '#03e9f4',
+        default: '#FF61BE',
         _dark: '#03e9f4',
       },
       bgCardColor1: {
@@ -52,7 +52,7 @@ const theme = extendTheme({
         _dark: 'gray.800',
       },
       hoverColor: {
-        default: '#0F5',
+        default: '#FF61BE',
           _dark: '#04E0D9',
       },
     },
