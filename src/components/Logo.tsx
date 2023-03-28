@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 const LogoBox = styled.span`
   display: inline-flex;
   align-items: center;
-  line-hight: 10px;
+  line-height: 10px;
   padding: 18px;
   
   img {
@@ -17,26 +17,23 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   const logoImg = `/images/logo${useColorModeValue('', '-dark')}.png`
-  //const logoImg =  `https://i.imgur.com${useColorModeValue('/4rbdnFL','/PiLt6pp',)}.png`
-
+  
 
   return (
     <Link  href="/" scroll={false}>
-      <a>
-        <motion.button whileHover={{ scale: 1.2 }}>
-          
-          <LogoBox>
-            <Image 
-              src={logoImg}
-              width={25} 
-              height={15}
-              
-              alt="logo" 
-              />
+      <motion.button whileHover={{ scale: 1.2 }}>
+        
+        <LogoBox>
+          <Image 
+            src={logoImg}
+            width={25} 
+            height={15}
             
-          </LogoBox>
-        </motion.button>
-      </a>
+            alt="logo" 
+            />
+          
+        </LogoBox>
+      </motion.button>
     </Link>
   )
 }

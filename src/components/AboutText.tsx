@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-key */
 import { Box, Container, Flex, Grid, GridItem, Icon, List, ListItem, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion";
-import * as techs from './data/techs';
+import * as techs from '../data/techs';
 
 export function AboutText() {
 

@@ -77,7 +77,6 @@ export function Navbar() {
       as="header"
       position="fixed"
       w="100%"
-      bg={useColorModeValue("#ffffff40", "#171923")} 
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
       >

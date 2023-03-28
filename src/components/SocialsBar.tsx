@@ -1,5 +1,5 @@
 import { Box, Container, Icon, Link, List, ListItem, VisuallyHidden } from '@chakra-ui/react'
-import Socials from './data/Socials'
+import Socials from '../data/Socials'
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 

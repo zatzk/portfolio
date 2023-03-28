@@ -18,11 +18,13 @@
     "@fontsource/karla": "^4.5.8",
     "@fontsource/roboto": "^4.5.7",
     "@types/estree": "^1.0.0",
+    "eslint-config-next": "^13.2.4",
     "framer-motion": "^6.3.0",
-    "next": "latest",
+    "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "styled-icons": "^10.47.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -33,7 +35,6 @@
     "@types/uuid": "^8.3.4",
     "babel-loader": "^8.2.5",
     "eslint": "^8.20.0",
-    "eslint-config-next": "^12.2.3",
     "prettier": "^2.7.1",
     "typescript": "^4.7.2"
   },
