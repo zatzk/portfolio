@@ -8,7 +8,6 @@ export const SocialsCard = ({
   icon,
   href,
   name,
-  color,
 }) => {
 
   return (
@@ -23,7 +22,7 @@ export const SocialsCard = ({
               height="20px"
               as={icon}
               name={name}
-              _hover={{ color: color }}
+              _hover={{ color: 'hoverColor' }}
               />
             </Link>
         </motion.div>
@@ -37,8 +36,6 @@ SocialsCard.propTypes = {
   icon: PropTypes.object.isRequired,
   href: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-
 }
 
 
@@ -81,7 +78,6 @@ export function SocialsBar() {
             icon={social.icon}
             href={social.href}
             name={social.name}
-            color={social.color}
           />
         ))}
       </List>
@@ -90,7 +86,7 @@ export function SocialsBar() {
         width={{base:"0px",md:"1px",lg:"1px"}}
         height={{base:"0px",md:"90px",lg:"90px"}}
         margin="0px auto"
-        bg="#04E0D9"
+        bg="hoverColor"
         ></Box>
       </motion.div>
     </Container>
