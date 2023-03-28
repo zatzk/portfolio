@@ -59,7 +59,7 @@ export default [
     tools: [nextjs, sass, leaflet],
     proto: 'http://santa-tracking-app.vercel.app/',
     repo: 'https://github.com/zatzk/santa-tracking-app',
-    typeProject: ["BACKEND"],
+    typeProject: ["BACKEND", "FRONTEND"],
     id: uuidv4(),
   },
   

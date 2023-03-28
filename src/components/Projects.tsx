@@ -160,6 +160,7 @@ export function Projects() {
               title={data.title}
               description={data.description}
               tools={data.tools}
+              types={data.typeProject}
               proto={data.proto}
               repo={data.repo}
             />
