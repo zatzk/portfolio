@@ -92,12 +92,13 @@ export const ProjectCard = ({
             >
               {types.map((type) => (
                 <Box
+                key={type}
                 as="a"
                 fontFamily="primary"
                 fontSize="14px"
                 // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
                 >
-                  {type} 
+                  {type}&nbsp;
                 </Box>
               ))}
             </Flex>
