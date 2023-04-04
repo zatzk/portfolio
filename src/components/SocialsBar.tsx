@@ -33,7 +33,7 @@ export const SocialsCard = ({
 }
 
 SocialsCard.propTypes = {
-  icon: PropTypes.object.isRequired,
+  icon: PropTypes.func.isRequired,
   href: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 }
@@ -75,9 +75,10 @@ export function SocialsBar() {
         {Socials.map((social) => (
           // eslint-disable-next-line react/jsx-key
           <SocialsCard 
+            key={social.name}
+            name={social.name}
             icon={social.icon}
             href={social.href}
-            name={social.name}
           />
         ))}
       </List>

@@ -90,13 +90,13 @@ export const ProjectCard = ({
               justifyContent="flex-start"
               alignItems="center"
             >
-              {types.map((type) => (
+              {types.map((type, index) => (
                 <Box
-                key={type}
-                as="a"
-                fontFamily="primary"
-                fontSize="14px"
-                // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+                  key={Math.random().toString() + index}
+                  as="a"
+                  fontFamily="primary"
+                  fontSize="14px"
+                  // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
                 >
                   {type}&nbsp;
                 </Box>
@@ -177,9 +177,9 @@ export const ProjectCard = ({
           <List display="flex" flexDirection="row" alignItems="flex-end" flexGrow="1" flexWrap="wrap" mt="20px">
             {tools.map((tool) => (
               <motion.a whileHover={{ scale: 1.1 }}>
-
-                <ListItem key={tool.id} p="0.5rem">
+                <ListItem p="0.5rem">
                   <Icon
+                    key={tool.id}
                     aria-label={tool.name}
                     transitionDuration="300ms"
                     boxSize="1.5rem"
