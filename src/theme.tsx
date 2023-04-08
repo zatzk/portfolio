@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme, ColorMode } from '@chakra-ui/react'
 import "@fontsource/karla"
 import "@fontsource/roboto"
 import "@fontsource/jetbrains-mono"
@@ -16,7 +16,7 @@ const fonts = { primary: 'Karla',
 const theme = extendTheme({
   
   styles: {
-    global: (props: any) => ({
+    global: (props: { colorMode: ColorMode } ) => ({
       'html, body': {
         backgroundColor: props.colorMode === 'dark' ? 'bgColor' : 'bgColor',
       },
