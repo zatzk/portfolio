@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { useColorMode } from "@chakra-ui/react";
+import { ProjectCardProps } from "../interfaces/ProjectCardProps"
 
 const useBoxCardVariants = () => {
   const { colorMode } = useColorMode();
@@ -50,7 +51,7 @@ export const ProjectCard = ({
   proto,
   repo,
   types,
-}) => {
+}: ProjectCardProps) => {
 
   const {boxCardVariants} = useBoxCardVariants();
 

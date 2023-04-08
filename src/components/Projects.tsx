@@ -8,11 +8,13 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ProjectCard } from "./ProjectCard";
-import CardData from "../data/CardData";
 import { useState } from "react";
 import { css } from "@emotion/react";
 import { useColorMode } from "@chakra-ui/react";
+import CardData from "../data/CardData";
+import { CardDataProps } from "../interfaces/CardDataProps"
 
+const unfilteredData: CardDataProps[] = CardData
 
 export function Projects() {
   const { colorMode } = useColorMode();
@@ -44,8 +46,7 @@ export function Projects() {
     background: ${background};
     transition: width 0.2s ease 0s, left 0.2s ease 0s;
     width: 0;
-    box-shadow: ${boxShadow};
-    
+    box-shadow: ${boxShadow}; 
   }
   .chakra-tabs__tab:hover:after { 
     cursor: pointer;
@@ -58,16 +59,16 @@ export function Projects() {
   }
 `;
 
-  const [stack, setStack] = useState("ALL");
+  const [stack, setStack] = useState<string>("ALL");
 
-  function handleChange(id) {
-    setStack(id);
+  function handleChange(name: string) {
+    setStack(name);
   }
   
   const filteredData = 
       stack === "ALL" 
-      ? CardData
-      : CardData.filter((item) => item.typeProject.includes(stack));
+      ? unfilteredData
+      : unfilteredData.filter((item) => item.typeProject.includes(stack));
 
   return (
     <Container
@@ -162,7 +163,7 @@ export function Projects() {
           gap="1.10rem"
           padding="0px"
         >
-          {filteredData.map((data) => (
+          {filteredData.map((data: CardDataProps) => (
             <ProjectCard
               key={data.title}
               title={data.title}
