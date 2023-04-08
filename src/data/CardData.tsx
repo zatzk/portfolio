@@ -38,7 +38,7 @@ export default [
     title: 'geradordegatinhos-API',
     description: 'An mock api database of cats memes. This project was built to be originally used by the discord bot "senjougahara bot',
     tools: [nodejs, js, netlify, json],
-    proto: null,
+    proto: undefined,
     repo: 'https://github.com/zatzk/geradorDeGatinho-API',
     typeProject: ["BACKEND"],
     id: uuidv4(),
