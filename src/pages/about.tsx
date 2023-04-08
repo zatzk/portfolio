@@ -10,13 +10,13 @@ import { HeadTag } from '../components/Head'
 import { HeadProps } from '../interfaces/HeadProps'
 
 
-const about = ({ pageTitle, pageName }: HeadProps) => {
-  pageTitle = 'About';
-  pageName = 'AboutPage';
+const about = ({ title, name }: HeadProps) => {
+  title = 'About';
+  name = 'AboutPage';
   
   return (
     <Container height="100%">
-      <HeadTag title={pageTitle} name={pageName}/>
+      <HeadTag title={title} name={name}/>
 
       <Navbar />
       <SocialsBar />

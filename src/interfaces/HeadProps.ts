@@ -1,4 +1,4 @@
 export interface HeadProps {
-  pageTitle: string;
-  pageName: string;
+  title: string;
+  name: string;
 }
