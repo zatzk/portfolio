@@ -6,13 +6,9 @@ import { Hero } from '../components/Hero'
 import { Projects } from '../components/Projects'
 import { SocialsBar } from '../components/SocialsBar'
 import { HeadTag } from '../components/Head'
+import { HeadProps } from '../interfaces/HeadProps'
 
-interface IndexProps {
-  pageTitle: string;
-  pageName: string;
-}
-
-export default function Index({ pageTitle, pageName }: IndexProps) {
+export default function Index({ pageTitle, pageName }: HeadProps) {
   pageTitle = 'Projects';
   pageName = 'Homepage';
 
