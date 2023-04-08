@@ -22,7 +22,7 @@ export default [
     tools: [react, nextjs, typescript, chakra, framer],
     proto: 'https://portfolio-zatzk.vercel.app',
     repo: 'https://github.com/zatzk/portfolio',
-    typeProject: ["FRONTEND"],
+    sets: ["FRONTEND"],
     id: uuidv4(),
   },
   {
@@ -31,7 +31,7 @@ export default [
     tools: [typescript, nodejs],
     proto: 'https://senjougaharabot-website.vercel.app',
     repo: 'https://github.com/zatzk/senjougaharaBot-TS',
-    typeProject: ["BACKEND"],
+    sets: ["BACKEND"],
     id: uuidv4(),
   },
   {
@@ -40,7 +40,7 @@ export default [
     tools: [nodejs, js, netlify, json],
     proto: undefined,
     repo: 'https://github.com/zatzk/geradorDeGatinho-API',
-    typeProject: ["BACKEND"],
+    sets: ["BACKEND"],
     id: uuidv4(),
   },
   {
@@ -49,7 +49,7 @@ export default [
     tools: [astro, typescript, tailwind],
     proto: 'https://senjougaharabot-website.vercel.app',
     repo: 'https://github.com/zatzk/senjougaharabot-website',
-    typeProject: ["FRONTEND"],
+    sets: ["FRONTEND"],
     id: uuidv4(),
   },
   {
@@ -58,7 +58,7 @@ export default [
     tools: [nextjs, sass, leaflet],
     proto: 'http://santa-tracking-app.vercel.app/',
     repo: 'https://github.com/zatzk/santa-tracking-app',
-    typeProject: ["BACKEND", "FRONTEND"],
+    sets: ["BACKEND", "FRONTEND"],
     id: uuidv4(),
   },
   

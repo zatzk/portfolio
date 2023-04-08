@@ -9,7 +9,7 @@ export interface CardDataProps {
   title: string;
   description: string;
   tools: Tool[];
-  typeProject: string[];
   proto?: string;
   repo: string;
+  sets: string[];
 }

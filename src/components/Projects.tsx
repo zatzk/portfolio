@@ -68,7 +68,7 @@ export function Projects() {
   const filteredData = 
       stack === "ALL" 
       ? unfilteredData
-      : unfilteredData.filter((item) => item.typeProject.includes(stack));
+      : unfilteredData.filter((item) => item.sets.includes(stack));
 
   return (
     <Container
@@ -169,9 +169,9 @@ export function Projects() {
               title={data.title}
               description={data.description}
               tools={data.tools}
-              types={data.typeProject}
               proto={data.proto}
               repo={data.repo}
+              sets={data.sets}
             />
           ))}
         </SimpleGrid>

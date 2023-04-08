@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { useColorMode } from "@chakra-ui/react";
-import { ProjectCardProps } from "../interfaces/ProjectCardProps"
+import { CardDataProps } from "../interfaces/CardDataProps"
 
 const useBoxCardVariants = () => {
   const { colorMode } = useColorMode();
@@ -50,8 +50,8 @@ export const ProjectCard = ({
   tools,
   proto,
   repo,
-  types,
-}: ProjectCardProps) => {
+  sets,
+}: CardDataProps) => {
 
   const {boxCardVariants} = useBoxCardVariants();
 
@@ -91,7 +91,7 @@ export const ProjectCard = ({
               justifyContent="flex-start"
               alignItems="center"
             >
-              {types.map((type, index) => (
+              {sets.map((set, index) => (
                 <Box
                   key={Math.random().toString() + index}
                   as="a"
@@ -99,7 +99,7 @@ export const ProjectCard = ({
                   fontSize="14px"
                   // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
                 >
-                  {type}&nbsp;
+                  {set}&nbsp;
                 </Box>
               ))}
             </Flex>
@@ -203,7 +203,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tools: PropTypes.array.isRequired,
-  types: PropTypes.array.isRequired,
+  sets: PropTypes.array.isRequired,
   proto: PropTypes.string,
   repo: PropTypes.string.isRequired
 };
