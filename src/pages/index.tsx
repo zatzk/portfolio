@@ -6,19 +6,15 @@ import { Hero } from '../components/Hero'
 import { Projects } from '../components/Projects'
 import { SocialsBar } from '../components/SocialsBar'
 import { HeadTag } from '../components/Head'
+import { HeadProps } from '../interfaces/HeadProps'
 
-interface IndexProps {
-  pageTitle: string;
-  pageName: string;
-}
-
-export default function Index({ pageTitle, pageName }: IndexProps) {
-  pageTitle = 'Projects';
-  pageName = 'Homepage';
+export default function Index({ title, name }: HeadProps) {
+  title = 'Projects';
+  name = 'Homepage';
 
   return (
     <Container height="100%">
-      <HeadTag title={pageTitle} name={pageName}/>
+      <HeadTag title={title} name={name}/>
       
       <Navbar />
       <SocialsBar />

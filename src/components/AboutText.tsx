@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/jsx-key */
-import { Box, Container, Flex, Grid, GridItem, Icon, List, ListItem, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Grid, GridItem, Icon, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion";
-import * as techs from '../data/Techs';
+import { TechsProps } from "../interfaces/TechsProps"
+import * as techs from "../data/Techs";
 
 export function AboutText() {
 
@@ -113,7 +114,7 @@ export function AboutText() {
                       <Techs 
                       icon={tech.icon}
                       name={tech.name}
-                      color={tech.color}
+                      color={tech.color || undefined}
                       />
                       </motion.div>
                     ))}
@@ -130,8 +131,7 @@ export function AboutText() {
 
   )
 }
-// eslint-disable-next-line react/prop-types
-const Techs = ({icon, color, name}) => {
+const Techs = ({icon, color, name}: TechsProps) => {
 
   return (
     <GridItem

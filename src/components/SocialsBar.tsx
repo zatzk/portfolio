@@ -2,13 +2,14 @@ import { Box, Container, Icon, Link, List, ListItem } from '@chakra-ui/react'
 import Socials from '../data/Socials'
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import { SocialsCardProps } from '../interfaces/SocialsCardProps'
 
 
 export const SocialsCard = ({
   icon,
   href,
   name,
-}) => {
+}: SocialsCardProps) => {
 
   return (
     <ListItem>
@@ -33,7 +34,7 @@ export const SocialsCard = ({
 }
 
 SocialsCard.propTypes = {
-  icon: PropTypes.object.isRequired,
+  icon: PropTypes.elementType.isRequired,
   href: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 }
@@ -75,9 +76,10 @@ export function SocialsBar() {
         {Socials.map((social) => (
           // eslint-disable-next-line react/jsx-key
           <SocialsCard 
+            key={social.name}
+            name={social.name}
             icon={social.icon}
             href={social.href}
-            name={social.name}
           />
         ))}
       </List>

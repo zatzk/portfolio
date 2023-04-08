@@ -1,11 +1,11 @@
 import { Box, Container, Flex } from '@chakra-ui/react'
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
-import WavyText from "./textAnimation/WavyText";
+import WavyText from "./utils/WavyText";
 
 
 export function Hero() {
-  const [replay, setReplay] = useState(true);
+  const [replay] = useState(true);
   const [showComponent, setShowComponent] = useState(false);
 
   useEffect(() => {

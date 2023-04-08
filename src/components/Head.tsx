@@ -1,9 +1,5 @@
 import Head from "next/head";
-
-export interface HeadProps {
-  title: string;
-  name: string;
-}
+import { HeadProps } from "../interfaces/HeadProps"
 
 export function HeadTag({title, name}: HeadProps) {
   return (

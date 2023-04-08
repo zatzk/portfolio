@@ -16,7 +16,7 @@ const fonts = { primary: 'Karla',
 const theme = extendTheme({
   
   styles: {
-    global: (props) => ({
+    global: (props: any) => ({
       'html, body': {
         backgroundColor: props.colorMode === 'dark' ? 'bgColor' : 'bgColor',
       },

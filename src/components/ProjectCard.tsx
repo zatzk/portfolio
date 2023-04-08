@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { useColorMode } from "@chakra-ui/react";
+import { CardDataProps } from "../interfaces/CardDataProps"
 
 const useBoxCardVariants = () => {
   const { colorMode } = useColorMode();
@@ -49,8 +50,8 @@ export const ProjectCard = ({
   tools,
   proto,
   repo,
-  types,
-}) => {
+  sets,
+}: CardDataProps) => {
 
   const {boxCardVariants} = useBoxCardVariants();
 
@@ -90,15 +91,15 @@ export const ProjectCard = ({
               justifyContent="flex-start"
               alignItems="center"
             >
-              {types.map((type) => (
+              {sets.map((set, index) => (
                 <Box
-                key={type}
-                as="a"
-                fontFamily="primary"
-                fontSize="14px"
-                // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+                  key={Math.random().toString() + index}
+                  as="a"
+                  fontFamily="primary"
+                  fontSize="14px"
+                  // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
                 >
-                  {type}&nbsp;
+                  {set}&nbsp;
                 </Box>
               ))}
             </Flex>
@@ -177,9 +178,9 @@ export const ProjectCard = ({
           <List display="flex" flexDirection="row" alignItems="flex-end" flexGrow="1" flexWrap="wrap" mt="20px">
             {tools.map((tool) => (
               <motion.a whileHover={{ scale: 1.1 }}>
-
-                <ListItem key={tool.id} p="0.5rem">
+                <ListItem p="0.5rem">
                   <Icon
+                    key={tool.id}
                     aria-label={tool.name}
                     transitionDuration="300ms"
                     boxSize="1.5rem"
@@ -202,7 +203,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tools: PropTypes.array.isRequired,
-  types: PropTypes.array.isRequired,
+  sets: PropTypes.array.isRequired,
   proto: PropTypes.string,
   repo: PropTypes.string.isRequired
 };
