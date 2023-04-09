@@ -21,16 +21,16 @@ const Logo = () => {
 
   return (
     <Link  href="/" scroll={false}>
-      <motion.button whileHover={{ scale: 1.2 }}>
-        
+      <motion.button 
+        whileTap={{ scale: 0.93 }}
+      >
         <LogoBox>
           <Image 
             src={logoImg}
+            alt="logo" 
             width={25} 
             height={15}
-            
-            alt="logo" 
-            />
+          />
           
         </LogoBox>
       </motion.button>
