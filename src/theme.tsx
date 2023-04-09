@@ -2,6 +2,7 @@ import { extendTheme, ColorMode } from '@chakra-ui/react'
 import "@fontsource/karla"
 import "@fontsource/roboto"
 import "@fontsource/jetbrains-mono"
+import "@fontsource/share-tech-mono"
 
 const config = {
   initialColorMode: "dark",
@@ -9,7 +10,8 @@ const config = {
 };
 
 const fonts = { primary: 'Karla', 
-                secondary: 'JetBrains Mono'
+                secondary: 'JetBrains Mono',
+                tertiary: 'Share Tech Mono'
               }
 
 
