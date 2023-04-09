@@ -92,7 +92,7 @@ export function Navbar() {
       >
         <Container  
           display="flex"
-          p={2}
+          p={4}
           maxW="container.lg"
           alignContent="center"
           justifyContent="space-between"

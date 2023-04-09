@@ -123,13 +123,13 @@ export function NavbarDesign() {
       >
         <Container  
           display="flex"
-          p={2}
+          p={4}
           maxW="container.lg"
           alignContent="center"
           justifyContent="space-between"
           fontFamily="tertiary"
           fontStyle="normal"
-          fontWeight="300"
+          fontWeight="600"
           fontSize="13.5"
           >
           <LogoDesign />
