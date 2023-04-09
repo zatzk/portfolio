@@ -8,13 +8,13 @@ import { SocialsBar } from '../components/SocialsBar'
 import { HeadTag } from '../components/Head'
 import { HeadProps } from '../interfaces/HeadProps'
 
-export default function Index({ title, name }: HeadProps) {
-  title = 'Projects';
-  name = 'Homepage';
+export default function Index({ title, content }: HeadProps) {
+  title = 'Developer Page';
+  content = 'Projects';
 
   return (
     <Container height="100%">
-      <HeadTag title={title} name={name}/>
+      <HeadTag title={title} content={content}/>
       
       <Navbar />
       <SocialsBar />

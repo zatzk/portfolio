@@ -1,4 +1,4 @@
 export interface HeadProps {
   title: string;
-  name: string;
+  content: string;
 }
