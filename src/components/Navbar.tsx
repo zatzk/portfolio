@@ -10,11 +10,11 @@ import { useColorMode } from "@chakra-ui/react";
 
 const Links = [
   {
-    name: "DEV",
+    name: "WORK",
     path: "/",
   },
   {
-    name: "DESIGN",
+    name: "ARTS",
     path: "/design",
   },
   {
@@ -58,7 +58,9 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
   }
 `
   return (    
-    <motion.div whileHover={{ scale: 1.2 }}>
+    <motion.div 
+      whileTap={{ scale: 0.98 }}
+    >
       <Box 
         textDecoration="none"
         letterSpacing="4px"
