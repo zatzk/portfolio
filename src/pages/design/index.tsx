@@ -18,7 +18,7 @@ export default function Design({ title, content }: HeadProps) {
       
       <NavbarDesign/>
       <IntroDesign/>
-      <ContainerDesign pt={14}/>
+      <ContainerDesign pt={20}/>
       
       <Box
         h="100dvh"
