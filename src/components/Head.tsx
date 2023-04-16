@@ -13,7 +13,7 @@ export function HeadTag({title, content}: HeadProps) {
         <meta property="og:site_name" content="zatzk's portfolio" />
         <meta name="og:title" content="zatzk's portfolio" />
         <meta property="og:type" content="website" />
-        <title>{`zatzk&#39;s portfolio - ${title}`}</title>
+        <title>{`zatzk's portfolio - ${title}`}</title>
       </Head>
   )
 }
