@@ -14,11 +14,7 @@ const Links = [
     path: "/design",
   },
   {
-    name: "UI/UX",
-    path: "/",
-  },
-  {
-    name: "LOGOS",
+    name: "DEV",
     path: "/",
   },
   
