@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Box, BoxProps } from '@chakra-ui/react';
+import { Box, BoxProps, Text } from '@chakra-ui/react';
 
 export const ContainerDesign = (props: BoxProps) => {
+
   const [opacity, setOpacity] = useState(0.6); // Initial opacity value
 
   useEffect(() => {
@@ -33,6 +34,32 @@ export const ContainerDesign = (props: BoxProps) => {
       style={{ filter: `opacity(${opacity})` }} // Set opacity based on state value
       transition="all 0.15s ease-out"
       {...props}
-    />
+    >
+      <Box
+        width="100%"
+        height="100%"
+        display="flex"
+        alignItems="flex-end"
+        justifyContent="center"
+      >
+        <Box 
+          position="absolute"
+          display={{base:"none", md:"block",lg:"block"}}
+          width={{base:"0px",md:"1px",lg:"1px"}}
+          height={{base:"0px",md:"60px",lg:"60px"}}
+          margin="0px auto"
+          bg="#d5ded7"
+        />
+        <Text
+          position="absolute"
+          display={{base:"none", md:"block",lg:"block"}}
+          alignItems="left"
+          marginLeft="120px"
+          marginBottom="20px"
+        >
+          Scroll to more
+        </Text>
+      </Box>
+    </Box>
   );
 };
