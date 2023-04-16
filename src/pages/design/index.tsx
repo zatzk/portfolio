@@ -2,13 +2,11 @@ import { ContainerDesign } from '../../components/designPage/ContainerDesign'
 import { Main } from '../../components/Main'
 import { Footer } from '../../components/Footer'
 import { NavbarDesign } from '../../components/designPage/NavbarDesign'
-import { Hero } from '../../components/Hero'
-import { Projects } from '../../components/Projects'
-import { SocialsBar } from '../../components/SocialsBar'
 import { HeadTag } from '../../components/Head'
 import { HeadProps } from '../../interfaces/HeadProps'
 import { Box } from '@chakra-ui/react'
 import { Container } from '../../components/Container'
+import { IntroDesign } from '../../components/designPage/IntroDesign'
 
 export default function Design({ title, content }: HeadProps) {
   title = 'Designer Page';
@@ -18,15 +16,10 @@ export default function Design({ title, content }: HeadProps) {
     <Container height="100%" bgColor="#141416">
       <HeadTag title={title} content={content}/>
       
-      <NavbarDesign />
-      {/* <SocialsBar /> */}
-      <ContainerDesign pt={14}>
-        <Main >
-          TEXTO TEXTO TEXTO
-          {/* <Hero/>
-          <Projects /> */}
-        </Main>
-      </ContainerDesign>
+      <NavbarDesign/>
+      <IntroDesign/>
+      <ContainerDesign pt={14}/>
+      
       <Box
         h="100dvh"
       >
