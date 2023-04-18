@@ -33,7 +33,8 @@ export function IntroDesign(props: BoxProps) {
  
   return (
     <Container 
-      maxW="100vw"
+      maxW="100dvw"
+      maxH="100dvh"
       padding="50px"
       height="100%"
       flexWrap="wrap"
@@ -42,12 +43,13 @@ export function IntroDesign(props: BoxProps) {
       {...props}
     >
       <Flex
-        maxW="100dvw"
+        maxW="100%"
+        height="100%"
         display="flex"
         alignItems="center"
         justifyContent="center"
-        py={{base: "300px", md: "300px", lg:"300px"}}
-        px={{base: "100px", md: "200px", lg:"300px"}}
+        // py={{base: "100px", md: "150px", lg:"300px"}}
+        // px={{base: "100px", md: "150px", lg:"300px"}}
       >
         <Flex fontSize="30px" fontWeight="900" fontFamily="secondary" flexDirection="column">
         <motion.div
