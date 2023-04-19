@@ -1,5 +1,4 @@
 import { ContainerDesign } from '../../components/designPage/ContainerDesign'
-import { Main } from '../../components/Main'
 import { Footer } from '../../components/Footer'
 import { NavbarDesign } from '../../components/designPage/NavbarDesign'
 import { HeadTag } from '../../components/Head'
@@ -23,6 +22,7 @@ export default function Design({ title, content }: HeadProps) {
       <Box
         h="100dvh"
       >
+        aaa
         aaa
       <Footer />
       </Box>
