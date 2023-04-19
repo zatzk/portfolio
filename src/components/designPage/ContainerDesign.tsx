@@ -22,19 +22,19 @@ export const ContainerDesign = (props: BoxProps) => {
 
   return (
     <Box
-      h="100vh"
+      h="100dvh"
       direction="column"
       alignItems="center"
       justifyContent="flex-start"
-      bgImage="/images/untitled.gif"
-      bgSize="cover"
-      bgPosition="center"
-      bgAttachment="fixed"
+      // bgImage="/images/portfolioBg.gif"
+      // bgSize="cover"
+      // bgPosition="center"
+      // bgAttachment="fixed"
       color="#d5ded7"
       style={{ filter: `opacity(${opacity})` }} // Set opacity based on state value
       transition="all 0.15s ease-out"
       {...props}
-    >
+    > 
       <Box
         width="100%"
         height="100%"
@@ -42,11 +42,25 @@ export const ContainerDesign = (props: BoxProps) => {
         alignItems="flex-end"
         justifyContent="center"
       >
+        <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: "fixed",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: -1,
+        }}
+      >
+        <source src="/videos/portfolioBg.mp4" type="video/mp4" />
+      </video>
         <Box 
           position="absolute"
           display={{base:"none", md:"block",lg:"block"}}
           width={{base:"0px",md:"1px",lg:"1px"}}
-          height={{base:"0px",md:"60px",lg:"60px"}}
+          height={{base:"0px",md:"40px",lg:"40px"}}
           margin="0px auto"
           bg="#d5ded7"
         />
@@ -54,10 +68,10 @@ export const ContainerDesign = (props: BoxProps) => {
           position="absolute"
           display={{base:"none", md:"block",lg:"block"}}
           alignItems="left"
-          marginLeft="120px"
-          marginBottom="20px"
+          marginLeft="90px"
+          marginBottom="10px"
         >
-          Scroll to more
+          Scroll here
         </Text>
       </Box>
     </Box>
