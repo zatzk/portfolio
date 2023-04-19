@@ -3,7 +3,20 @@
 import { Box, Container, Flex, Grid, GridItem, Icon, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion";
 import { TechsProps } from "../interfaces/TechsProps"
-import * as techs from "../data/Techs";
+import {
+  chakra,
+  nextjs,
+  nodejs,
+  react,
+  typescript,
+  framer,
+  js,
+  json,
+  tailwind,
+  sass,
+} from '../data/Tools';
+
+const techs = { chakra, nextjs, nodejs, react, typescript, framer, js, json, tailwind, sass};
 
 export function AboutText() {
 
@@ -19,7 +32,7 @@ export function AboutText() {
       opacity: 1,
     }
   }
-  console.log(techs)
+  
   return (
     <Container 
       maxW="container.lg"
