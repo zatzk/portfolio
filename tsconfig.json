@@ -32,12 +32,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/Navbar.tsx",
     "src/pages/index.tsx",
-    "src/components/Main.tsx",
-    "src/components/Logo.tsx",
-    "src/components/Hero.js",
-    "src/components/Main.js",
+    "src/components/**.tsx",
+    "src/components/**/**.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
