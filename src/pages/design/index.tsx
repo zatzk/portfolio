@@ -6,26 +6,27 @@ import { HeadProps } from '../../interfaces/HeadProps'
 import { Box } from '@chakra-ui/react'
 import { Container } from '../../components/Container'
 import { IntroDesign } from '../../components/designPage/IntroDesign'
+import { Gallery } from '../../components/designPage/Gallery'
 
 export default function Design({ title, content }: HeadProps) {
   title = 'Designer Page';
   content = 'Designs';
 
   return (
-    <Container height="100%" bgColor="#141416">
+    <Container height="100%" bgColor="#fff">
       <HeadTag title={title} content={content}/>
       
-      <NavbarDesign/>
-      <IntroDesign/>
-      <ContainerDesign pt={20}/>
+      {/* <IntroDesign/> */}
+      {/* <ContainerDesign pt={20}/> */}
       
-      <Box
-        h="100dvh"
-      >
-        aaa
-        aaa
+      <NavbarDesign/>
+      <Gallery/>
+      {/* <Box
+        // display={{base:"flex", md:"block"}}
+
+        >
+      </Box> */}
       <Footer />
-      </Box>
     </Container>
   )
 } 
