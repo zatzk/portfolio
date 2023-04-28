@@ -15,7 +15,7 @@ const LogoBox = styled.span`
   `
 
 const LogoDesign = () => {
-  const logoImg = `/images/logo-dark.png`
+  const logoImg = `/images/logo.png`
   
 
   return (
