@@ -2,9 +2,9 @@ import { Box, BoxProps } from '@chakra-ui/react'
 
 export const Container = (props: BoxProps) => (
   <Box
-    direction="column"
-    alignItems="center"
-    justifyContent="flex-start"
+    // direction="column"
+    // alignItems="center"
+    // justifyContent="flex-start"
     // old bg variation
     // bgGradient="linear(to-t, gray.70, gray.50)"
     // color="black"
