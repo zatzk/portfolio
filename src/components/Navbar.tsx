@@ -10,11 +10,11 @@ import { useColorMode } from "@chakra-ui/react";
 
 const Links = [
   {
-    name: "WORK",
+    name: "CODE",
     path: "/",
   },
   {
-    name: "ARTS",
+    name: "DESIGN",
     path: "/design",
   },
   {
