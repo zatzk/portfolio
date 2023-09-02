@@ -4,6 +4,7 @@ import "@fontsource/roboto"
 import "@fontsource/teko"
 import "@fontsource/orbitron"
 
+
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: false,
@@ -12,6 +13,7 @@ const config = {
 const fonts = { primary: 'Karla', 
                 secondary: 'Orbitron',
                 tertiary: 'Teko',
+                quaternary: 'Monument',
               }
 
 
