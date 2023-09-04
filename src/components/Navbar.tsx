@@ -78,7 +78,7 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
 
 
 export function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
 
 
   return(
