@@ -1,6 +1,12 @@
 @font-face {
-  font-family: 'Monument'; 
+  font-family: 'Monument Bold'; 
   src: url('/fonts/Monument Extended Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Monument Regular'; 
+  src: url('/fonts/Monument Extended Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
