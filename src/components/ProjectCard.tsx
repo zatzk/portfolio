@@ -67,7 +67,8 @@ export const ProjectCard = ({
       }}
     >
       <Flex
-        fontFamily="primary"
+        fontFamily="seninary"
+        fontWeight="regular"
         display="flex"
         justifyContent="space-between"
         flexDirection="column"
@@ -150,7 +151,8 @@ export const ProjectCard = ({
           <motion.div>
             <Heading
               //_hover={{color: "hoverColor"}}
-              fontFamily="primary"
+              fontFamily="seninary"
+              fontWeight="regular"
               transitionDuration="300ms"
               position="static"
               fontSize="22px"
@@ -163,7 +165,8 @@ export const ProjectCard = ({
           </motion.div>
 
           <Text
-            fontFamily="primary"
+            fontFamily="seninary"
+            fontWeight="300"
             position="relative"
             fontSize="sm"
             // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"

@@ -95,7 +95,8 @@ export function Projects() {
         >
           <TabList
             borderBottom="none"
-            fontFamily="primary"
+            fontFamily="seninary"
+            fontWeight="100"
           >
             <Tab 
               name="ALL"
