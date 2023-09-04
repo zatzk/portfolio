@@ -44,7 +44,7 @@ export function Projects() {
     left: 50%;
     position: absolute;
     background: ${background};
-    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    transition: width 0.8s ease 0s, left 0.8s ease 0s;
     width: 0;
     box-shadow: ${boxShadow}; 
   }
