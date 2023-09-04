@@ -95,11 +95,9 @@ export function Projects() {
         >
           <TabList
             borderBottom="none"
+            fontFamily="primary"
           >
-            <Tab
-              fontFamily="primary"
-              fontStyle="normal"
-              fontWeight="300"
+            <Tab 
               name="ALL"
               onClick={(event) => {
                 handleChange(event.currentTarget.name);
@@ -108,9 +106,6 @@ export function Projects() {
               ALL
             </Tab>
             <Tab
-              fontFamily="primary"
-              fontStyle="normal"
-              fontWeight="300"
               name="FRONTEND"
               onClick={(event) => {
                 handleChange(event.currentTarget.name);
@@ -119,9 +114,6 @@ export function Projects() {
               FRONTEND
             </Tab>
             <Tab
-              fontFamily="primary"
-              fontStyle="normal"
-              fontWeight="300"
               name="BACKEND"
               onClick={(event) => {
                 handleChange(event.currentTarget.name);
@@ -130,9 +122,6 @@ export function Projects() {
               BACKEND
             </Tab>
             <Tab
-              fontFamily="primary"
-              fontStyle="normal"
-              fontWeight="300"
               name="MOBILE"
               onClick={(event) => {
                 handleChange(event.currentTarget.name);
