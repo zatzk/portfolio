@@ -19,8 +19,8 @@ export default function Index({ title, content }: HeadProps) {
       <Navbar />
       <SocialsBar />
       <Container pt={14}>
+        <Hero/>
         <Main >
-          <Hero/>
           <Projects />
         </Main>
 
