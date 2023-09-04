@@ -3,7 +3,7 @@ import "@fontsource/karla"
 import "@fontsource/roboto"
 import "@fontsource/teko"
 import "@fontsource/orbitron"
-
+import '@fontsource/kanit';
 
 const config = {
   initialColorMode: "dark",
@@ -15,6 +15,7 @@ const fonts = { primary: 'Karla',
                 tertiary: 'Teko',
                 quaternary: 'Monument Regular',
                 quinary: 'Monument Bold',
+                seninary: 'Kanit',
               }
 
 
