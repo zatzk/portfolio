@@ -6,38 +6,89 @@ import WavyText from "./utils/WavyText";
 
 export function Hero() {
   const [replay] = useState(true);
-  const [showComponent, setShowComponent] = useState(false);
+  const [showFirstComponent, setShowFirstComponent] = useState(false);
+  const [showSecondComponent, setShowSecondComponent] = useState(false);
 
   useEffect(() => {
     setInterval(() => {
-      setShowComponent(!showComponent);
+      setShowFirstComponent(!showFirstComponent);
+    }, 500);
+  }, []);
+
+  useEffect(() => {
+    setInterval(() => {
+      setShowSecondComponent(!showSecondComponent);
     }, 1000);
   }, []);
   
   return(
-    <Container 
-    maxW="container.lg"
-    padding="50px"
+  <Container 
+    maxW="container.xxl"
+    position="relative"
+    padding="65px"
+    paddingRight="0px"
+    paddingTop="0px"
     height="100%"
     flexWrap="wrap"
     alignContent="center"
-    >
-      <Flex
+    fontFamily="quaternary"
+  >
+    <Flex
       justifyContent="left"
       alignItems="center"
       bgGradient="linear(to-l, heroGradientStart, heroGradientEnd)"
       bgClip="text"
-      
     >
       <Box 
-        fontWeight="bold"
-        fontStyle="normal" 
-        fontSize={{base: 50, md: 80, lg: 90}}
+        fontSize={{base: 80, md: 90, lg: 100, xl: 120}}
+        marginTop={{base: 92, md: 92, lg: 0, xl: 0}}
         textShadow="rgb(255 215 77 / 5%) -1px -1px 6px, rgb(124 127 255 / 5%) 1px 1px 6px"
-        >
-          <WavyText text="hi, im zatzk" replay={replay}/>
-        </Box>
-      </Flex>
+      >
+        <WavyText text="Hello." replay={replay}/>
+      </Box>
+    </Flex>
+    <Flex
+      justifyContent="left"
+      alignItems="center"
+      bgGradient="linear(to-l, heroGradientStart, heroGradientEnd)"
+      bgClip="text"
+    >
+      <Box 
+        display={{ base: 'none', md: 'block' }}
+        fontSize={{base: 80, md: 90, lg: 100, xl: 120}}
+        textShadow="rgb(255 215 77 / 5%) -1px -1px 6px, rgb(124 127 255 / 5%) 1px 1px 6px"
+      >
+         {showFirstComponent && <WavyText text="I am zatzk" replay={replay}/>}
+      </Box>
+    </Flex>
+    <Flex
+      justifyContent="left"
+      alignItems="center"
+      bgGradient="linear(to-l, heroGradientStart, heroGradientEnd)"
+      bgClip="text"
+    >
+      <Box 
+        display={{ base: 'block', md: 'none' }}
+        fontSize={{base: 80, md: 90, lg: 100, xl: 120}}
+        textShadow="rgb(255 215 77 / 5%) -1px -1px 6px, rgb(124 127 255 / 5%) 1px 1px 6px"
+      >
+         {showFirstComponent && <WavyText text="I am" replay={replay}/>}
+      </Box>
+    </Flex>
+    <Flex
+      justifyContent="left"
+      alignItems="center"
+      bgGradient="linear(to-l, heroGradientStart, heroGradientEnd)"
+      bgClip="text"
+    >
+      <Box 
+        display={{ base: 'block', md: 'none' }}
+        fontSize={{base: 80, md: 90, lg: 100, xl: 120}}
+        textShadow="rgb(255 215 77 / 5%) -1px -1px 6px, rgb(124 127 255 / 5%) 1px 1px 6px"
+      >
+         {showFirstComponent && <WavyText text="zatzk" replay={replay}/>}
+      </Box>
+    </Flex>
 
 
     
@@ -45,15 +96,16 @@ export function Hero() {
         <Box
           fontWeight="bold" 
           fontStyle="normal" 
-          fontSize={{base: 15, md: 20, lg: 30}}
+          fontSize={{base: 10, md: 15, lg: 20}}
           // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
           color="textColor"
         >
-          {showComponent && <WavyText text="Developer" replay={replay}/>}
+          {showSecondComponent && <WavyText text="Developer" replay={replay}/>}
           
        </Box>
       </Flex>
-    </Container>
+
+  </Container>
     
   )
 }
