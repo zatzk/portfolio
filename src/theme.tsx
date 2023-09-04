@@ -13,7 +13,8 @@ const config = {
 const fonts = { primary: 'Karla', 
                 secondary: 'Orbitron',
                 tertiary: 'Teko',
-                quaternary: 'Monument',
+                quaternary: 'Monument Regular',
+                quinary: 'Monument Bold',
               }
 
 
