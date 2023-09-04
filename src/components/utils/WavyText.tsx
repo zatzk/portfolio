@@ -50,7 +50,7 @@ const WavyText: FC<Props> = ({
 
   return (
     <motion.span
-      style={{ display: "flex", overflow: "hidden", lineHeight: "1" }}
+      style={{ display: "flex", overflow: "hidden" }}
       variants={container}
       initial="hidden"
       animate={replay ? "visible" : "hidden"}
