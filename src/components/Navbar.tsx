@@ -10,21 +10,21 @@ import { useColorMode } from "@chakra-ui/react";
 
 const Links = [
   {
-    name: "CODE",
+    name: "code",
     path: "/",
   },
   {
-    name: "DESIGN",
+    name: "design",
     path: "/design",
   },
   {
-    name: "ABOUT",
+    name: "about",
     path: "/about",
   },
-  {
-    name: "CV",
-    path: "/resume.pdf",
-  },
+  // {
+  //   name: "cv",
+  //   path: "/resume.pdf",
+  // },
   
 ];
 
@@ -46,7 +46,7 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
     left: 50%;
     position: absolute;
     background: ${background};
-    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    transition: width 0.8s ease 0s, left 0.8s ease 0s;
     width: 0;
     box-shadow: ${boxShadow};
     
@@ -65,9 +65,9 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
         textDecoration="none"
         letterSpacing="4px"
         display="inline-flex"
-        padding="15px 20px"
+        padding="15px 15px"
         position="relative"
-        marginRight="10px"
+        // marginRight="10px"
         css={[btn]}
         >    
         <Link href={path}>{children}</Link>
@@ -85,32 +85,34 @@ export function Navbar() {
     
     <Box  
       as="header"
+      paddingTop={{ base: 4, md: 8 }}
+      paddingX={{ base: 4, md: 4, lg: 8 }}
       position="fixed"
       w="100%"
-      css={{ backdropFilter: 'blur(10px)' }}
+      // css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
       >
         <Container  
           display="flex"
           p={4}
-          maxW="container.lg"
+          maxW="container.xxl"
           alignContent="center"
-          justifyContent="space-between"
-          fontFamily="primary"
+          justifyContent="right"
+          fontFamily="quinary"
           fontStyle="normal"
           fontWeight="300"
           fontSize="13.5"
-          // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
+          textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
 
           >
-          <Logo />
+          {/* <Logo /> */}
 
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={10} alignItems={"center"}>
             
             <HStack
               as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
+              spacing={0}
+              display={{ base: "flex", md: "flex" }}
           >
               {Links.map(({ name, path }) => (
                 <NavLink key={path} path={path}>
@@ -121,18 +123,20 @@ export function Navbar() {
 
           <DarkModeSwitch  />
           
-          <IconButton
+          {/* old mobile navbar */}
+          {/* <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
-          />
+          /> */}
           </HStack>
           
         </Container>
 
-        {isOpen ? (
+        {/* old mobile navbar */}
+        {/* {isOpen ? (
           <Box pb={4} ml={2} display={{ base:'inline-block', md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map(({ name, path }) => (
@@ -142,7 +146,7 @@ export function Navbar() {
               ))}
             </Stack>
           </Box>
-        ) : null}
+        ) : null} */}
       </Box>
   )
 } 
