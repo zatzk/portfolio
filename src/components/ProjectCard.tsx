@@ -79,6 +79,7 @@ export const ProjectCard = ({
         borderRadius="5px"
         bgGradient="linear(to-b, bgCardColor1, bgCardColor2)"
       >
+        <div className='bg-card'/>
         <Box as="header" display="block">
           <Flex
             display="flex"
@@ -119,6 +120,7 @@ export const ProjectCard = ({
                   pr="15px"
                   _hover={{ color: 'hoverColor' }}
                   transitionDuration="300ms"
+                  zIndex="1"
                 >
                   <motion.div
                     whileTap="hoverIconLink"
@@ -136,6 +138,7 @@ export const ProjectCard = ({
                 target="_blank"
                 _hover={{ color: 'hoverColor' }}
                 transitionDuration="300ms"
+                zIndex="1"
                 >
                 <motion.div
                   whileTap="hoverIconLink"
@@ -158,6 +161,7 @@ export const ProjectCard = ({
               fontSize="22px"
               lineHeight="1.1"
               mb="10px"
+              zIndex="1"
               // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
             >
               {title}
@@ -169,6 +173,7 @@ export const ProjectCard = ({
             fontWeight="300"
             position="relative"
             fontSize="sm"
+            zIndex="1"
             // textShadow="rgb(255 215 77 / 20%) -1px -1px 6px, rgb(124 127 255 / 20%) 1px 1px 6px"
           >
             {description}
@@ -179,6 +184,7 @@ export const ProjectCard = ({
         <Box
           as="footer"
           display="block"
+          zIndex="1"
         >
           <List display="flex" flexDirection="row" alignItems="flex-end" flexGrow="1" flexWrap="wrap" mt="20px">
             {tools.map((tool) => (
