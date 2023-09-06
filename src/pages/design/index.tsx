@@ -13,7 +13,7 @@ export default function Design({ title, content }: HeadProps) {
   content = 'Designs';
 
   return (
-    <Container height="100%" bgColor="#fff">
+    <Container height="100%" className='secondThemeSwitch'>
       <HeadTag title={title} content={content}/>
       
       {/* <IntroDesign/> */}

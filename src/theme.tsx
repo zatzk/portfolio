@@ -23,8 +23,11 @@ const theme = extendTheme({
   
   styles: {
     global: (props: { colorMode: ColorMode } ) => ({
-      'html, body': {
+      '.firstThemeSwitch': {
         backgroundColor: props.colorMode === 'dark' ? 'bgColor' : 'bgColor',
+      },
+      '.secondThemeSwitch': {
+        backgroundColor: props.colorMode === 'dark' ? 'bgDesignColor' : 'bgDesignColor',
       },
       '.bg': {
         position: 'fixed',
@@ -78,6 +81,10 @@ const theme = extendTheme({
       bgColor: {
         default: 'gray.100',
         _dark: 'gray.900',
+      },
+      bgDesignColor: {
+        default: '#ebebeb',
+        _dark: '#000',
       },
       textColor: {
         default: '#3a3a40',

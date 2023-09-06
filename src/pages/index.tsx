@@ -13,7 +13,7 @@ export default function Index({ title, content }: HeadProps) {
   content = 'Projects';
 
   return (
-    <Container height="100%">
+    <Container height="100%" className='firstThemeSwitch'>
       <HeadTag title={title} content={content}/>
       
       <Navbar />
