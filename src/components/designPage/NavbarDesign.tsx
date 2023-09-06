@@ -6,16 +6,20 @@ import LogoDesign from "./LogoDesign";
 import { css } from '@emotion/react'
 import { motion } from 'framer-motion'
 import {useEffect} from 'react'
+import { DarkModeSwitch } from "../DarkModeSwitch";
 
 const Links = [
-  
   {
-    name: "DIGITAL ART",
+    name: "CODE",
+    path: "/",
+  },
+  {
+    name: "DESIGN",
     path: "/design",
   },
   {
-    name: "DEV",
-    path: "/",
+    name: "ABOUT",
+    path: "/about",
   },
   
 ];
@@ -24,30 +28,30 @@ const Links = [
 
 const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
 
-  const btn = css`
-  a {
-    color: #d5ded7
-  }
-  a:after {    
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #d5ded7;
-    transition: width 0.2s ease 0s, left 0.2s ease 0s;
-    width: 0;
-    box-shadow: #d5ded7;
+//   const btn = css`
+//   a {
+//     color: #d5ded7
+//   }
+//   a:after {    
+//     background: none repeat scroll 0 0 transparent;
+//     bottom: 0;
+//     content: "";
+//     display: block;
+//     height: 2px;
+//     left: 50%;
+//     position: absolute;
+//     background: #d5ded7;
+//     transition: width 0.2s ease 0s, left 0.2s ease 0s;
+//     width: 0;
+//     box-shadow: #d5ded7;
     
-  }
-  a:hover:after { 
-    width: 100%; 
-    left: 0; 
-    
-  }
-`
+//   }
+//   a:hover:after { 
+//     width: 100%; 
+//     left: 0;  
+//   }
+// `
+
   
   useEffect(() => {
     const intervalId = setInterval(shuffleText, 1000 / 60);
@@ -95,7 +99,7 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
         padding="15px 10px"
         position="relative"
         marginRight="10px"
-        css={[btn]}
+        // css={[btn]}
         >    
         <Link href={path} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>{text}</Link>
       </Box>
@@ -105,13 +109,15 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
 
 
 export function NavbarDesign() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
 
 
   return(
     
     <Box  
       as="header"
+      paddingTop={{ base: 4, md: 8 }}
+      paddingX={{ base: 4, md: 4, lg: 8 }}
       position="fixed"
       w="100%"
       // css={{ backdropFilter: 'blur(10px)' }}
@@ -120,42 +126,52 @@ export function NavbarDesign() {
         <Container  
           display="flex"
           p={4}
-          maxW="container.lg"
+          maxW="container.xxl"
           alignContent="center"
-          justifyContent="space-between"
+          justifyContent="flex-end"
           fontFamily="tertiary"
           fontStyle="normal"
           fontWeight="600"
-          fontSize="13.5"
+          fontSize="16.5"
           >
-          <LogoDesign />
+          {/* <LogoDesign /> */}
           
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={10} alignItems={"center"}>
             <HStack
               as={"nav"}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              display="flex"
             >
               {Links.map(({ name, path }) => (
-                <NavLink key={path} path={path}>
-                  {name}
-                </NavLink>
+                <div key={path} style={{ 
+                  maxWidth: '70px', 
+                  display: 'flex', 
+                  justifyContent: 'center', 
+                  alignItems: 'center',
+                  marginLeft: '35px',
+                  }}>
+                  <NavLink  path={path}>
+                    {name}
+                  </NavLink>
+                </div>
               ))}
             </HStack>
 
+            <DarkModeSwitch />
+
           
-          <IconButton
+          {/* <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
-          />
-          </HStack>
+          /> */}
+          </HStack> 
           
         </Container>
 
-        {isOpen ? (
+        {/* {isOpen ? (
           <Box pb={4} ml={2} display={{ base:'inline-block', md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map(({ name, path }) => (
@@ -165,7 +181,7 @@ export function NavbarDesign() {
               ))}
             </Stack>
           </Box>
-        ) : null}
+        ) : null} */}
       </Box>
   )
 } 
