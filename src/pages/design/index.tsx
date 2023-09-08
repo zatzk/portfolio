@@ -1,5 +1,5 @@
 import { ContainerDesign } from '../../components/designPage/ContainerDesign'
-import { Footer } from '../../components/Footer'
+import { FooterDesign } from '../../components/designPage/FooterDesign'
 import { NavbarDesign } from '../../components/designPage/NavbarDesign'
 import { HeadTag } from '../../components/Head'
 import { HeadProps } from '../../interfaces/HeadProps'
@@ -7,6 +7,8 @@ import { Box } from '@chakra-ui/react'
 import { Container } from '../../components/Container'
 import { IntroDesign } from '../../components/designPage/IntroDesign'
 import { Gallery } from '../../components/designPage/Gallery'
+import { Main } from '../../components/Main'
+
 
 export default function Design({ title, content }: HeadProps) {
   title = 'Designer Page';
@@ -20,13 +22,15 @@ export default function Design({ title, content }: HeadProps) {
       {/* <ContainerDesign pt={20}/> */}
       
       <NavbarDesign/>
+
       <Gallery/>
+
       {/* <Box
         // display={{base:"flex", md:"block"}}
 
         >
       </Box> */}
-      <Footer />
+      <FooterDesign />
     </Container>
   )
 } 
