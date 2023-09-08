@@ -28,29 +28,30 @@ const Links = [
 
 const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
 
-//   const btn = css`
-//   a {
-//     color: #d5ded7
-//   }
-//   a:after {    
-//     background: none repeat scroll 0 0 transparent;
-//     bottom: 0;
-//     content: "";
-//     display: block;
-//     height: 2px;
-//     left: 50%;
-//     position: absolute;
-//     background: #d5ded7;
-//     transition: width 0.2s ease 0s, left 0.2s ease 0s;
-//     width: 0;
-//     box-shadow: #d5ded7;
+  const btn = css`
+  a:hover {
+    color: #F65252;
+    transition: 0.8s;
+  }
+  /* a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #d5ded7;
+    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    width: 0;
+    box-shadow: #d5ded7;
     
-//   }
-//   a:hover:after { 
-//     width: 100%; 
-//     left: 0;  
-//   }
-// `
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0;  
+  } */
+`
 
   
   useEffect(() => {
@@ -99,7 +100,7 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
         padding="15px 10px"
         position="relative"
         marginRight="10px"
-        // css={[btn]}
+        css={[btn]}
         >    
         <Link href={path} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>{text}</Link>
       </Box>
