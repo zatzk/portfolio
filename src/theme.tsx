@@ -29,6 +29,9 @@ const theme = extendTheme({
       '.secondThemeSwitch': {
         backgroundColor: props.colorMode === 'dark' ? 'bgDesignColor' : 'bgDesignColor',
       },
+      '.footerDesign': {
+        backgroundColor: props.colorMode === 'dark' ? '#fff' : '#F65252',
+      },
       '.bg': {
         position: 'fixed',
         top: '-50%',
