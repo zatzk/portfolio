@@ -11,8 +11,9 @@ export const Gallery = () => {
 
   return (
     <Container
+      maxH="100%"
       maxW="85%"
-      paddingY="3.125rem"
+      paddingTop="8rem"
       height="100%"
       flexWrap="wrap"
       alignContent="center"
