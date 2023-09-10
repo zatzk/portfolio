@@ -31,6 +31,7 @@ const theme = extendTheme({
       },
       '.footerDesign': {
         backgroundColor: props.colorMode === 'dark' ? '#fff' : '#F65252',
+        color: props.colorMode === 'dark' ? '#000' : '#ebebeb',
       },
       '.bg': {
         position: 'fixed',
