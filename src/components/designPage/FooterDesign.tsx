@@ -59,7 +59,7 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
           display="inline-flex"
           padding="15px 2px"
           position="relative"
-          fontFamily="quinary"
+          fontFamily="quaternary"
           marginRight="10px"
           css={[btn]}
           >
