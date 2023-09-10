@@ -5,7 +5,7 @@ export const Footer = () => (
     as="footer" 
     fontSize="sm"
     opacity={0.4}
-    fontFamily="primary"
+    fontFamily="secondary"
     textAlign="center"
     pb="20px"
     mt="80px"
