@@ -1,39 +1,31 @@
-import { Box, Container, SimpleGrid } from '@chakra-ui/react';
-import { useState } from 'react';
-import Image from 'next/image'
+/* eslint-disable react/prop-types */
+import { Container } from '@chakra-ui/react';
+import Image from 'next/image';
+import { imageData } from '../../data/imageData';
 
-import imageData from '../../data/imageData';
+export const Gallery = ({ selectedCategory }: { selectedCategory: string }) => {
+  const getImageDataByCategory = () => {
+    switch (selectedCategory) {
+      case 'posters':
+        return imageData.poster;
+      case 'ui/ux':
+        return imageData.uiUx;
+      case 'logos':
+        return imageData.logos;
+      default:
+        return [];
+    }
+  };
 
-
-export const Gallery = () => {
- 
-
+  const images = getImageDataByCategory();
 
   return (
-    <Container
-      maxH="100%"
-      maxW="85%"
-      paddingTop="8rem"
-      height="100%"
-      flexWrap="wrap"
-      alignContent="center"
-      mr={0}
-    >
-
-      <SimpleGrid
-        // marginTop={10}
-        flexWrap="wrap"
-        display="grid"
-        minChildWidth="30rem"
-        columns={[1, 2, 3]}
-        gap="0.8rem"
-        padding="0px"
-          >
-        {imageData.map((image, index) => (
-          <Image height={5000} width={5000} key={index} src={image.src} alt="test" />
-          ))}
-        
-      </SimpleGrid>
+    <Container minH="100dvh" position="relative" maxW="100%" paddingLeft={{base: '20%', md:'10%', lg: '8%', xl: '6%'}} paddingTop="8rem">
+      <div>
+        {images.map((image) => (
+          <Image key={image.id} src={image.src} width={90} height={90} alt="test" />
+        ))}
+      </div>
     </Container>
   );
 };
