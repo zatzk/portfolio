@@ -7,6 +7,10 @@ export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { sele
   
 
   const handleCategoryChange = (newCategory: string) => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
     setSelectedCategory(newCategory); 
   };
 
@@ -14,7 +18,7 @@ export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { sele
     <Box 
       as="nav"
       display="inline-flex"
-      position="absolute"
+      position="fixed"
       minH="100vh"
       zIndex={99}
     >
