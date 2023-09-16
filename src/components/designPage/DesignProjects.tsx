@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Box, css, List, ListItem, transition, useColorMode } from '@chakra-ui/react';
-import { useState } from 'react';
+import { Box, List, ListItem } from '@chakra-ui/react';
 
 
 export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { selectedCategory: string, setSelectedCategory: React.Dispatch<React.SetStateAction<string>> }) => { 
@@ -30,7 +29,8 @@ export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { sele
         <ListItem
           key={category}
           onClick={() => handleCategoryChange(category)}
-          _active={selectedCategory === category }
+          className={selectedCategory === category ? 'active' : ''}
+          // _active={selectedCategory === category }
           transform="rotateZ(-90deg)"
           cursor="pointer"
           _hover={{
@@ -42,6 +42,14 @@ export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { sele
         </ListItem>
       ))}
       </List>
+      <style>
+        {`
+          .active{
+            color: #F65252 !important;
+            transition: all 0.8s ease !important;
+          }
+        `}
+      </style>
     </Box>
   );
 };
