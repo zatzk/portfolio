@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Box, BoxProps, Text } from '@chakra-ui/react';
 
-export const ContainerDesign = (props: BoxProps) => {
-
+export const ContainerAbout = (props: BoxProps) => {
+  const [isClient, setIsClient] = useState(false);
   const [opacity, setOpacity] = useState(0.6); // Initial opacity value
 
   useEffect(() => {
+    setIsClient(true);
     const handleScroll = (event: WheelEvent) => {
       
       const delta = event.deltaY > 0 ? -0.1 : 0.1;
@@ -42,20 +43,22 @@ export const ContainerDesign = (props: BoxProps) => {
         alignItems="flex-end"
         justifyContent="center"
       >
+      {isClient && (
         <video
-        autoPlay
-        loop
-        muted
-        style={{
-          position: "fixed",
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: -1,
-        }}
-      >
-        <source src="/videos/portfolioBg.mp4" type="video/mp4" />
-      </video>
+          autoPlay
+          loop
+          muted
+          style={{
+            position: "fixed",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: -1,
+          }}
+        >
+          <source src="/videos/portfolioBg.mp4" type="video/mp4" />
+        </video>
+      )}
         <Box 
           position="absolute"
           display={{base:"none", md:"block",lg:"block"}}
