@@ -6,19 +6,18 @@ const line1 = [
   'ARTIST',
 ]
 const line2 = [  
-  'AND',
-]
-const line3 = [
-  'UI',
+  'UI/UX',
   'DESIGNER',
 ]
+const line3 = [
+  'AND',
+]
 const line4 = [
-  'BORN',
-  'IN',
-  'BRAZIL',
+  'SOFTWARE',
+  'ENGINEER',
 ]
 
-export function IntroDesign(props: BoxProps) {
+export function IntroAbout(props: BoxProps) {
 
   const aboutText = {
     hidden: {
