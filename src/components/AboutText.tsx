@@ -40,11 +40,12 @@ export function AboutText() {
       height="100%"
       flexWrap="wrap"
       alignContent="center"
+      fontFamily="secondary"
     >
       <Flex
         padding={{base: "0px", md: "50px", lg:"100px"}}
         >
-          <Flex fontSize="18px" fontFamily="primary" flexDirection="column">
+          <Flex fontSize="18px" flexDirection="column">
 
             <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 0.1, duration: 0.8}}>
               <Box mb="30px" fontSize="22px"  pb="12px" display="flex">
