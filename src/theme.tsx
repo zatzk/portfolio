@@ -29,6 +29,10 @@ const theme = extendTheme({
       '.secondThemeSwitch': {
         backgroundColor: props.colorMode === 'dark' ? 'bgDesignColor' : 'bgDesignColor',
       },
+      '.thirdThemeSwitch': {
+        backgroundColor: props.colorMode === 'dark' ? 'bgAboutColor' : 'bgAboutColor',
+        textColor: props.colorMode === 'dark' ? 'textAboutColor' : 'textAboutColor',
+      },
       '.footerDesign': {
         backgroundColor: props.colorMode === 'dark' ? '#fff' : '#F65252',
         color: props.colorMode === 'dark' ? '#000' : '#ebebeb',
@@ -75,9 +79,9 @@ const theme = extendTheme({
         top: '0',
         width: '100%',
       },
-      'h2, a': {
-        color: props.colorMode === 'dark' ? '#d5ded7' : '#3a3a40',
-      },
+      // 'h2, a': {
+      //   color: props.colorMode === 'dark' ? '#d5ded7' : '#3a3a40',
+      // },
     }),
   },
   semanticTokens: {
@@ -89,6 +93,14 @@ const theme = extendTheme({
       bgDesignColor: {
         default: '#ebebeb',
         _dark: '#000',
+      },
+      bgAboutColor: {
+        default: '#000',
+        _dark: '#000',
+      },
+      textAboutColor: {
+        default: '#d5ded7',
+        _dark: '#d5ded7',
       },
       textColor: {
         default: '#3a3a40',
