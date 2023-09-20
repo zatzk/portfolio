@@ -35,19 +35,20 @@ export function AboutText() {
   
   return (
     <Container 
-      maxW="container.lg"
+      maxW="container.xl"
       padding="50px"
+      
       height="100%"
       flexWrap="wrap"
-      alignContent="center"
+      alignContent="left"
       fontFamily="secondary"
     >
       <Flex
         padding={{base: "0px", md: "50px", lg:"100px"}}
         >
-          <Flex fontSize="18px" flexDirection="column">
+          <Flex fontSize={38} flexDirection="column">
 
-            <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 0.1, duration: 0.8}}>
+            {/* <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 0.1, duration: 0.8}}>
               <Box mb="30px" fontSize="22px"  pb="12px" display="flex">
                 <Text>
                   Background
@@ -65,17 +66,17 @@ export function AboutText() {
                 ></Box>
               </Box>
               
-            </motion.a>
+            </motion.a> */}
             <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 0.3, duration: 0.8}}>
               <Box  pb="35px" display="inline-block">
                 <Text>
-                  Hey there! My name is Jean Luiz, also known by the handle zatzk. 
-                  I&#39;m a software engineering student at Instituto Federal da Bahia (IFBA) 
-                  and a self-taught designer and digital artist.
+                  hey there! I am jean luiz, also go by zatzk as handle.
+                  I&#39;m a software engineer, UX/UI designer and digital artist based in salvador/brazil.
                 </Text>
               </Box>
             </motion.a>
-            <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 0.6, duration: 0.8}}>
+           
+            {/* <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 0.6, duration: 0.8}}>
               <Box pb="35px" display="inline-block">
                 <Text>
                   I was born and raised in the city of Salvador/Brazil. 
@@ -94,7 +95,7 @@ export function AboutText() {
                   playing RTS and RPG games and listen to music.
                 </Text>
               </Box>
-            </motion.a>
+            </motion.a> */}
 
             <motion.a variants={aboutText} initial="hidden" animate="show" transition={{delay: 1.1, duration: 0.8}}>
               <Box mt="30px" fontSize="22px" pt="22px" pb="22px" display="flex">
