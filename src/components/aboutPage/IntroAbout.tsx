@@ -2,19 +2,19 @@ import { BoxProps, Container, Flex, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion";
 
 const line1 = [
-  'DIGITAL',
-  'ARTIST',
+  'SOFTWARE',
+  'ENGINEER',
 ]
 const line2 = [  
-  'UI/UX',
+  'UX/UI',
   'DESIGNER',
 ]
 const line3 = [
   'AND',
 ]
 const line4 = [
-  'SOFTWARE',
-  'ENGINEER',
+  'DIGITAL',
+  'ARTIST',
 ]
 
 export function IntroAbout(props: BoxProps) {
