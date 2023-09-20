@@ -3,22 +3,21 @@ import { Box, Container, HStack, IconButton, Stack, useDisclosure } from "@chakr
 import Link from "next/link";
 import { ReactNode } from "react";
 import { DarkModeSwitch } from "../../components/DarkModeSwitch";
-import Logo from "./Logo";
 import { css } from '@emotion/react'
 import { motion } from 'framer-motion'
 import { useColorMode } from "@chakra-ui/react";
 
 const Links = [
   {
-    name: "code",
+    name: "CODE",
     path: "/",
   },
   {
-    name: "design",
+    name: "DESIGN",
     path: "/design",
   },
   {
-    name: "about",
+    name: "ABOUT",
     path: "/about",
   },
   // {
@@ -30,31 +29,52 @@ const Links = [
 
 
 
-const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
-  const { colorMode } = useColorMode();
-  const boxShadowColor = colorMode === "light" ? "#FF61BE" : "#03e9f4";
-  const background = colorMode === "light" ? "#FF61BE" : "#03e9f4";
-  const boxShadow = `0 0 5px ${boxShadowColor}, 0 0 25px ${boxShadowColor}, 0 0 50px ${boxShadowColor}, 0 0 200px ${boxShadowColor}`;
+const NavLink = ({ children, path }: { children: string; path: string }) => {
 
   const btn = css`
-  a:after {    
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: ${background};
-    transition: width 0.8s ease 0s, left 0.8s ease 0s;
-    width: 0;
-    box-shadow: ${boxShadow};
-    
-  }
-  a:hover:after { 
-    width: 100%; 
-    left: 0; 
-    
+
+    a {
+    position: relative;
+    display: inline-block;
+    a-decoration: none;
+    color: #fff;
+    z-index: 1;
+    }
+
+    a::before,
+    a::after {
+      content: '${children}';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    a::before {
+      color: #00ffff;
+      z-index: -1;
+    }
+
+    a::after {
+      color: #ff00ff;
+      z-index: -2;
+    }
+
+    a:hover::before {
+      animation: glitchy 0.3s ease 0.3s infinite;
+    }
+
+    a:hover::after {
+      animation: glitchy 0.3s ease infinite reverse;
+    }
+
+    @keyframes glitchy {
+      0%   {transform: translate(-2px, 2px);}
+      25%  {transform: translate(-2px, -2px);}
+      50%  {transform: translate(2px, 2px);}
+      75%  {transform: translate(2px, -2px);}
+      100%  {transform: translate(-2px, 2px);}
   }
 `
   return (    
@@ -98,7 +118,7 @@ export function AboutNavbar() {
           maxW="container.xxl"
           alignContent="center"
           justifyContent="right"
-          fontFamily="quinary"
+          fontFamily="secondary"
           fontStyle="normal"
           fontWeight="300"
           fontSize="13.5"
