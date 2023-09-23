@@ -66,6 +66,7 @@ export const ContainerAbout = (props: BoxProps) => {
           height={{base:"0px",md:"40px",lg:"40px"}}
           margin="0px auto"
           bg="#d5ded7"
+          cursor="default"
         />
         <Text
           position="absolute"
@@ -73,6 +74,7 @@ export const ContainerAbout = (props: BoxProps) => {
           alignItems="left"
           marginLeft="90px"
           marginBottom="10px"
+          cursor="default"
         >
           Scroll here
         </Text>
