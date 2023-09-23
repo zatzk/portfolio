@@ -7,7 +7,7 @@ export function useCategory() {
   return useContext(CategoryContext);
 }
 
-export function CategoryProvider({ children }) {
+export function CategoryProvider({ children }: any) {
   const [selectedCategory, setSelectedCategory] = useState('posters');
 
   const handleCategoryChange = (newCategory: React.SetStateAction<string>) => {
