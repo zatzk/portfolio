@@ -8,7 +8,7 @@ import { HeadProps } from '../../interfaces/HeadProps'
 import { IntroAbout } from '../../components/aboutPage/IntroAbout'
 import { ContainerAbout } from '../../components/aboutPage/ContainerAbout'
 import { AboutNavbar } from '../../components/aboutPage/AboutNavbar'
-
+import { FooterAbout } from '../../components/aboutPage/FooterAbout'
 
 export default function About({ title, content }: HeadProps) {
   title = 'About me';
@@ -25,7 +25,7 @@ export default function About({ title, content }: HeadProps) {
       <ContainerAbout/>
       <AboutText /> 
 
-      <Footer />
+      <FooterAbout />
 
       {/* <Container pt={14}>
         <Main >
