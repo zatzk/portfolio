@@ -148,7 +148,7 @@ const hoverText = css`
               <Box pb="35px" display="inline-block">
                 <Text>
                   hey there! I am <motion.span className="glitch">jean luiz</motion.span>, also go by <motion.span className="glitch">zatzk</motion.span> as handle.<br/>
-                  I&#39;m a <span className="hoveringText">software engineer</span>, <span className="hoveringText">UX/UI designer</span> and <span className="hoveringText">digital artist</span> based in salvador/brazil.<br/>here you can find my <motion.button whileHover={{scale: 1.5}} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="glitch">cv</motion.button>, or if you want to get in <motion.button whileHover={{scale: 1.5}} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="glitch">touch</motion.button>.
+                  I&#39;m a <span className="hoveringText">software engineer</span>, <span className="hoveringText">UX/UI designer</span> and <span className="hoveringText">digital artist</span> based in salvador/brazil.<br/>here you can find my <motion.button onClick={() => window.open("/resume.pdf")} whileHover={{scale: 1.5}} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="glitch">cv</motion.button>, or if you want to get in <motion.button onClick={() => window.open("mailto:zatzk@outlook.com")} whileHover={{scale: 1.5}} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="glitch">touch</motion.button>.
                 </Text>
               </Box>
             </motion.a>
