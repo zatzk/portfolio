@@ -19,6 +19,7 @@
     "@fontsource/orbitron": "^4.5.11",
     "@fontsource/roboto": "^4.5.7",
     "@fontsource/teko": "^4.5.9",
+    "@supabase/supabase-js": "^2.36.0",
     "@types/estree": "^1.0.0",
     "eslint-config-next": "^13.2.4",
     "framer-motion": "^6.3.0",
@@ -27,7 +28,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "styled-icons": "^10.47.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "yet-another-react-lightbox": "^3.12.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
