@@ -4,20 +4,17 @@ import { Navbar } from '../../components/Navbar'
 import { SocialsBar } from '../../components/SocialsBar'
 import { AboutText } from '../../components/AboutText'
 import { HeadTag } from '../../components/Head'
-import { HeadProps } from '../../interfaces/HeadProps'
 import { IntroAbout } from '../../components/aboutPage/IntroAbout'
 import { ContainerAbout } from '../../components/aboutPage/ContainerAbout'
 import { AboutNavbar } from '../../components/aboutPage/AboutNavbar'
 import { FooterAbout } from '../../components/aboutPage/FooterAbout'
 
-export default function About({ title, content }: HeadProps) {
-  title = 'About me';
-  content = 'About me';
-  
+export default function About() {
+
   return (
     <Container 
       minH="100dvh" className='thirdThemeSwitch'>
-      <HeadTag title={title} content={content}/>
+      <HeadTag title={'About Page'} content={'About Page'}/>
       
       <AboutNavbar />
       {/* <SocialsBar /> */}

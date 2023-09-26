@@ -6,15 +6,12 @@ import { Hero } from '../components/Hero'
 import { Projects } from '../components/Projects'
 import { SocialsBar } from '../components/SocialsBar'
 import { HeadTag } from '../components/Head'
-import { HeadProps } from '../interfaces/HeadProps'
 
-export default function Index({ title, content }: HeadProps) {
-  title = 'Developer Page';
-  content = 'Projects';
+export default function Index() {
 
   return (
     <Container height="100%" className='firstThemeSwitch'>
-      <HeadTag title={title} content={content}/>
+      <HeadTag title={'Code Page'} content={'Code Page'}/>
       
       <Navbar />
       <SocialsBar />
