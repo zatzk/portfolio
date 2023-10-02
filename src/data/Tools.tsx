@@ -19,10 +19,33 @@ import { Adobe } from "@styled-icons/simple-icons/Adobe";
 import { Socketdotio } from "@styled-icons/simple-icons/Socketdotio";
 import { Sass } from "@styled-icons/simple-icons/Sass";
 import { Netlify } from "@styled-icons/simple-icons/Netlify";
+import { Supabase } from "@styled-icons/simple-icons/Supabase";
+import { Angular } from "@styled-icons/simple-icons/Angular";
+import { Nestjs } from "@styled-icons/simple-icons/Nestjs";
+
 
 import { v4 as uuidv4 } from 'uuid';
 
 
+
+export const nestjs = {
+  name: 'Nestjs',
+  icon: Nestjs,
+  color: '#eb5904',
+  id: uuidv4()
+};
+export const angular = {
+  name: 'Angular',
+  icon: Angular,
+  color: '#ce0808',
+  id: uuidv4()
+};
+export const supabase = {
+  name: 'Supabase',
+  icon: Supabase,
+  color: '#08a014',
+  id: uuidv4()
+};
 export const netlify = {
   name: 'netlify',
   icon: Netlify,
