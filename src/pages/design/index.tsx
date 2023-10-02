@@ -5,7 +5,7 @@ import { Container } from '../../components/Container'
 import { DesignProjects } from '../../components/designPage/DesignProjects'
 import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
-import { Gallery } from '../../components/designPage/Gallery'
+import { Gallery } from '../../components/Gallery'
 
 
 
