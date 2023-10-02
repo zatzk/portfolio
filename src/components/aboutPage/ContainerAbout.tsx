@@ -75,8 +75,10 @@ export const ContainerAbout = (props: BoxProps) => {
           marginLeft="90px"
           marginBottom="10px"
           cursor="default"
+          fontFamily="tertiary"
+          fontSize="1.2rem"
         >
-          Scroll here
+          scroll here
         </Text>
       </Box>
     </Box>
