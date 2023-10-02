@@ -2,9 +2,7 @@
 import { Box, HStack } from '@chakra-ui/react'
 import { css } from '@emotion/react'
 import { motion } from 'framer-motion'
-import { useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
-import { ReactNode } from 'react';
 
 const Socials = [
   { name: 'github', path: 'https://github.com/zatzk' },
