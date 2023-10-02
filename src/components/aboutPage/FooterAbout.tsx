@@ -11,7 +11,7 @@ const Socials = [
   { name: 'linkedin', path: 'https://www.linkedin.com/in/zatzk/' },
   { name: 'behance', path: 'https://www.behance.net/zatzk' },
   { name: 'instagram', path: 'https://www.instagram.com/zatzk/' },
-  { name: 'cv', path: 'https://www.instagram.com/zatzk/' },
+  { name: 'cv', path: '/resume.pdf' },
 ]
 
 const NavLink = ({ children, path }: { children: string; path: string }) => {
