@@ -34,12 +34,10 @@ export const Gallery = ({ selectedCategory, imgFetched }: { selectedCategory: st
 
   
   const getSlides = images.map((image: any) => {
-    const width = 1080;
-    const height = 1350;
     return {
       src: image.imageSrc,
-      width,
-      height
+      width: image.width,
+      height: image.height
     }
   });
 
