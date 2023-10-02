@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-key */
 import { Box, Container, Flex, Grid, GridItem, Icon, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion";
-import { TechsProps } from "../interfaces/TechsProps"
+import { TechsProps } from "../../interfaces/TechsProps"
 import { css } from '@emotion/react'
 import {
   chakra,
@@ -15,7 +15,7 @@ import {
   json,
   tailwind,
   sass,
-} from '../data/Tools';
+} from '../../data/Tools';
 
 const techs = { chakra, nextjs, nodejs, react, typescript, framer, js, json, tailwind, sass};
 
