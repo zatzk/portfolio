@@ -16,7 +16,6 @@ export async function getStaticProps() {
   const supabaseAdmin = createClient(supabaseUrl, supabaseAnonKey)
 
   const { data: images } = await supabaseAdmin.from('images').select('id, type, imageSrc, width, height');
-  console.log(' images',images)
   return {
     props: {
       imgFetched: images,
