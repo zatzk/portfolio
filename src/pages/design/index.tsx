@@ -24,6 +24,7 @@ export async function getStaticProps() {
 }
 
 
+
 export default function Design({ imgFetched }: any) {
   const [selectedCategory, setSelectedCategory] = useState<string>('posters'); 
   
