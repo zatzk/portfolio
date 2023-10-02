@@ -2,10 +2,10 @@ import { FooterDesign } from '../../components/designPage/FooterDesign'
 import { NavbarDesign } from '../../components/designPage/NavbarDesign'
 import { HeadTag } from '../../components/Head'
 import { Container } from '../../components/Container'
-import { Gallery } from '../../components/designPage/Gallery'
 import { DesignProjects } from '../../components/designPage/DesignProjects'
 import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
+import { Gallery } from '../../components/designPage/Gallery'
 
 
 
