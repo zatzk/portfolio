@@ -63,7 +63,7 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => {
     return () => clearInterval(intervalId);
   }, []);
   
-  const [text, setText] = useState(children);
+  const [text, setText] = useState(children) as any;
   const [shuffleInterval, setShuffleInterval] = useState<NodeJS.Timeout>();
 
   const shuffleText = () => {
