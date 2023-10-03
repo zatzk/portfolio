@@ -7,9 +7,18 @@ import {
   SiDiscord,
   SiBehance
 } from 'react-icons/si';
+import {
+  MdOutlineArticle
+} from 'react-icons/md';
 import { v4 as uuidv4 } from 'uuid';
 
 export default [
+  {
+    icon: MdOutlineArticle,
+    href: '/resume.pdf',
+    name: 'resume',
+    id: uuidv4(),
+  },
   {
     icon: FiGithub,
     href: 'https://github.com/zatzk',
@@ -39,7 +48,8 @@ export default [
     href: 'https://behance.net/zatzk',
     name: 'behance',
     id: uuidv4(),
-  }
+  },
+
 ]
 
 
