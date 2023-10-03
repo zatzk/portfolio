@@ -126,7 +126,7 @@ export function AboutNavbar() {
           >
           {/* <Logo /> */}
 
-          <HStack spacing={10} alignItems={"center"}>
+          <HStack spacing={{ base: 0, md: 10 }} alignItems={"center"}>
             
             <HStack
               as={"nav"}

@@ -25,7 +25,7 @@ export function Hero() {
   <Container 
     maxW="container.xxl"
     position="relative"
-    padding="65px"
+    padding={{base: "15px", sm:"65px"}}
     paddingRight="0px"
     paddingTop="0px"
     height="100%"
@@ -101,7 +101,7 @@ export function Hero() {
           fontSize={{base: 16}}
           color="textColor"
           position={"absolute"}
-          left={{ base: 290, md: 660, lg: 750, xl: 900}}
+          left={{ base: 15, sm: 290, md: 660, lg: 750, xl: 900}}
         >
           {showSecondComponent && <WavyText text="Developer" replay={replay}/>}
        </Box>
@@ -112,7 +112,7 @@ export function Hero() {
           fontSize={{base: 16}}
           color="textColor"
           position={"absolute"}
-          left={{ base: 290, md: 660, lg: 750, xl: 900}}
+          left={{ base: 15, sm: 290, md: 660, lg: 750, xl: 900}}
         >
           {showSecondComponent && <WavyText text="UI/UX Designer" replay={replay}/>}
        </Box>

@@ -137,10 +137,10 @@ export function NavbarDesign() {
           >
           {/* <LogoDesign /> */}
           
-          <HStack spacing={10} alignItems={"center"}>
+          <HStack spacing={{ base: 0, md: 10 }} alignItems={"center"}>
             <HStack
               as={"nav"}
-              spacing={4}
+              spacing={0}
               display="flex"
             >
               {Links.map(({ name, path }) => (
@@ -156,9 +156,10 @@ export function NavbarDesign() {
                   </NavLink>
                 </div>
               ))}
+              <DarkModeSwitch />
             </HStack>
 
-            <DarkModeSwitch />
+
 
           
           {/* <IconButton

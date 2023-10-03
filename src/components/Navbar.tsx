@@ -94,7 +94,8 @@ export function Navbar() {
       >
         <Container  
           display="flex"
-          p={4}
+          py={4}
+          ml={{base:4, sm:0}}
           maxW="container.xxl"
           alignContent="center"
           justifyContent="right"
@@ -106,21 +107,21 @@ export function Navbar() {
           >
           {/* <Logo /> */}
 
-          <HStack spacing={10} alignItems={"center"}>
+          <HStack spacing={{ base: 0, md: 10 }} alignItems={"center"}>
             
             <HStack
               as={"nav"}
               spacing={0}
               display={{ base: "flex", md: "flex" }}
-          >
+            >
               {Links.map(({ name, path }) => (
                 <NavLink key={path} path={path}>
                   {name}
                 </NavLink>
               ))}
-          </HStack>
+              <DarkModeSwitch />
+            </HStack>
           
-          <DarkModeSwitch />
           
           {/* old mobile navbar */}
           {/* <IconButton

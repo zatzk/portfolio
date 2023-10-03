@@ -67,6 +67,7 @@ export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { sele
       display="inline-flex"
       position="fixed"
       minH="100vh"
+      mt={{base:90, md: 0}}
       zIndex={99}
       css={btn}
     >
@@ -75,7 +76,9 @@ export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { sele
         display="flex"
         flexDirection="column"
         justifyContent="space-around"
-        w="105px"
+        // w="105px"
+        h={"90vh"}
+        // h={{base:600, sm:700, md:900}}
       >
       {categories.map((category) => (
         <ListItem
