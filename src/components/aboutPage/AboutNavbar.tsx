@@ -141,7 +141,7 @@ export function AboutNavbar() {
           </HStack>
           
           {/* <DarkModeSwitch /> */}
-          <Box pl="40px"/>
+          <Box/>
           
           {/* old mobile navbar */}
           {/* <IconButton
