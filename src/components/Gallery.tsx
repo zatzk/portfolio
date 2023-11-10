@@ -3,6 +3,7 @@ import { Container, Spinner } from '@chakra-ui/react';
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/styles.css";
@@ -58,7 +59,15 @@ export const Gallery = ({ selectedCategory, imgFetched }: { selectedCategory: st
     return {
       src: image.imageSrc,
       width: image.width,
-      height: image.height
+      height: image.height,
+      imageComponent: (
+        <Image
+          src={image.imageSrc}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
+      )
     }
   });
 
