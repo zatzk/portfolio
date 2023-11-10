@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Box, List, ListItem, useColorMode } from '@chakra-ui/react';
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
 
 
 export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { selectedCategory: string, setSelectedCategory: React.Dispatch<React.SetStateAction<string>> }) => { 
@@ -62,6 +63,17 @@ export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { sele
   };
 
   return (
+    <motion.div
+    initial={{ y: -100, opacity: 0 }}
+    animate={{
+      y: 0,
+      opacity: 1,
+    }}
+    transition={{
+      ease: "easeOut",
+      delay: 1,
+    }}
+  >
     <Box 
       as="nav"
       display="inline-flex"
@@ -94,5 +106,6 @@ export const DesignProjects = ({ selectedCategory, setSelectedCategory }: { sele
       ))}
       </List>
     </Box>
+  </motion.div>
   );
 };

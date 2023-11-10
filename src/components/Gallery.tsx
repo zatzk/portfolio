@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/styles.css";
+import { motion } from 'framer-motion';
 
 
 export const Gallery = ({ selectedCategory, imgFetched }: { selectedCategory: string, imgFetched: any }) => {
@@ -89,6 +90,17 @@ export const Gallery = ({ selectedCategory, imgFetched }: { selectedCategory: st
       )}
       {imagesLoaded && (
         <>
+          <motion.div
+            initial={{ y: -200, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              ease: "easeOut",
+              delay: 1.3,
+            }}
+          >
           <PhotoAlbum
             photos={getSlides} 
             layout="rows" 
@@ -101,6 +113,7 @@ export const Gallery = ({ selectedCategory, imgFetched }: { selectedCategory: st
             index={index}
             close={() => setIndex(-1)}
           />
+          </motion.div>
         </>
       )}
     </Container>
