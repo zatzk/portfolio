@@ -87,7 +87,7 @@ export const FooterDesign = () => {
     className="footerDesign"
     >
       <Box display="inline-flex" flexWrap={"wrap"} width="100%" justifyContent="space-around" >
-        <Box marginLeft={{base:"30px", md:"4rem"}}>
+        <Box marginLeft={{base:"20px", md:"4rem"}} >
           <HStack spacing={2} display="inline-flex" flexWrap={"wrap"}> 
           {Socials.map((social) => (
               <NavLink key={social.path} path={social.path}>
@@ -97,6 +97,7 @@ export const FooterDesign = () => {
           </HStack>
         </Box>
         <Box 
+          marginLeft={{base:"20px", md:"4rem"}} 
           display={"flex"}
           justifyContent={"flex-end"}
           alignItems={"center"}
