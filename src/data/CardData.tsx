@@ -20,7 +20,7 @@ import {
 
 export default [
   {
-    title: 'this portfolio',
+    title: 'portfolio',
     description: 'This portfolio website! Built with react next.js, chakra-ui and framer-motion',
     tools: [react, nextjs, typescript, chakra, framer, supabase],
     proto: undefined,
@@ -29,7 +29,7 @@ export default [
     id: uuidv4(),
   },
   {
-    title: 'senjougahara bot ts',
+    title: 'senjougahara bot',
     description: 'A fun multipurpose discord bot that can do memes, translation and music, built with typescript',
     tools: [typescript, nodejs],
     proto: 'https://senjougaharabot-website.vercel.app',
@@ -39,7 +39,7 @@ export default [
   },
   {
     title: 'geradordegatinhos-api',
-    description: 'An mock api database of cats memes. This project was built to be originally used by the discord bot "senjougahara bot',
+    description: 'A mock api database of cat memes. This project was built to be originally used by the discord bot senjougahara',
     tools: [nodejs, js, netlify, json],
     proto: undefined,
     repo: 'https://github.com/zatzk/geradorDeGatinho-API',
@@ -48,7 +48,7 @@ export default [
   },
   {
     title: 'senjougahara webpage',
-    description: 'An webpage built entirely with astrojs and tailwindcss to my senjougahara discord bot',
+    description: 'A webpage built entirely with astrojs and tailwindcss to senjougahara discord bot',
     tools: [astro, typescript, tailwind],
     proto: 'https://senjougaharabot-website.vercel.app',
     repo: 'https://github.com/zatzk/senjougaharabot-website',
@@ -57,7 +57,7 @@ export default [
   },
   {
     title: 'technews script',
-    description: 'a nodejs server to fetch and process technology news from tabnews api and post it to a discord webhook',
+    description: 'a nodejs server to fetch and process tech world news from tabnews webpage and post it into a discord webhook',
     tools: [nodejs, js],
     proto: undefined,
     repo: 'https://github.com/zatzk/techNewsScript',
@@ -89,6 +89,15 @@ export default [
     proto: 'http://santa-tracking-app.vercel.app/',
     repo: 'https://github.com/zatzk/santa-tracking-app',
     sets: ["BACKEND", "FRONTEND"],
+    id: uuidv4(),
+  },
+  {
+    title: 'pokedex nextjs',
+    description: 'a pokedex built with nextjs and pokeapi',
+    tools: [nextjs, typescript],
+    proto: 'https://pokedex-nextjs-uioi.vercel.app',
+    repo: 'https://github.com/zatzk/pokedex-nextjs',
+    sets: ["FRONTEND"],
     id: uuidv4(),
   },
   
