@@ -68,7 +68,7 @@ export default [
     title: 'currency converter frontend',
     description: 'a currency converter frontend built entirely with angular and material ui',
     tools: [angular, typescript],
-    proto: 'https://senjougaharabot-website.vercel.app',
+    proto: 'https://angularex-2b64a.web.app/',
     repo: 'https://github.com/zatzk/currency-converter-angular',
     sets: ["FRONTEND"],
     id: uuidv4(),
